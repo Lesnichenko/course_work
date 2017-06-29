@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9C1E953B-8284-49A9-9547-5C0F24A8DDC2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GameApp</RootNamespace>
+    <AssemblyName>GameApp</AssemblyName>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Choosing.xaml.cs">
+      <DependentUpon>Choosing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screensaver.xaml.cs">
+      <DependentUpon>Screensaver.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Choosing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Screensaver.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sidebar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="button_sidebar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="button_sidebar_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\fox\giphy_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\fox\giphy_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\fox\giphy_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\fox\giphy_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\fox\giphy_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\fox\giphy_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\fox\giphy_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\fox\giphy_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\fox\giphy_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\fox\giphy_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\fox\giphy_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\fox\giphy_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="круг.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\выбор_фон.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\bear\giphy_1.png" />
+    <Resource Include="Image\gait\bear\giphy_10.png" />
+    <Resource Include="Image\gait\bear\giphy_11.png" />
+    <Resource Include="Image\gait\bear\giphy_12.png" />
+    <Resource Include="Image\gait\bear\giphy_13.png" />
+    <Resource Include="Image\gait\bear\giphy_2.png" />
+    <Resource Include="Image\gait\bear\giphy_3.png" />
+    <Resource Include="Image\gait\bear\giphy_4.png" />
+    <Resource Include="Image\gait\bear\giphy_5.png" />
+    <Resource Include="Image\gait\bear\giphy_6.png" />
+    <Resource Include="Image\gait\bear\giphy_7.png" />
+    <Resource Include="Image\gait\bear\giphy_8.png" />
+    <Resource Include="Image\gait\bear\giphy_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\hare\1.png" />
+    <Resource Include="Image\gait\hare\2.png" />
+    <Resource Include="Image\gait\hare\3.png" />
+    <Resource Include="Image\gait\hare\4.png" />
+    <Resource Include="Image\gait\hare\5.png" />
+    <Resource Include="Image\gait\hare\6.png" />
+    <Resource Include="Image\gait\hare\7.png" />
+    <Resource Include="Image\gait\hare\8.png" />
+    <Resource Include="Image\gait\hare\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\hedgehog\1.png" />
+    <Resource Include="Image\gait\hedgehog\10.png" />
+    <Resource Include="Image\gait\hedgehog\11.png" />
+    <Resource Include="Image\gait\hedgehog\2.png" />
+    <Resource Include="Image\gait\hedgehog\3.png" />
+    <Resource Include="Image\gait\hedgehog\4.png" />
+    <Resource Include="Image\gait\hedgehog\5.png" />
+    <Resource Include="Image\gait\hedgehog\6.png" />
+    <Resource Include="Image\gait\hedgehog\7.png" />
+    <Resource Include="Image\gait\hedgehog\8.png" />
+    <Resource Include="Image\gait\hedgehog\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\elk\1.png" />
+    <Resource Include="Image\gait\elk\2.png" />
+    <Resource Include="Image\gait\elk\3.png" />
+    <Resource Include="Image\gait\elk\4.png" />
+    <Resource Include="Image\gait\elk\5.png" />
+    <Resource Include="Image\gait\elk\6.png" />
+    <Resource Include="Image\gait\elk\7.png" />
+    <Resource Include="Image\gait\elk\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\squirrel\1.png" />
+    <Resource Include="Image\gait\squirrel\2.png" />
+    <Resource Include="Image\gait\squirrel\3.png" />
+    <Resource Include="Image\gait\squirrel\4.png" />
+    <Resource Include="Image\gait\squirrel\5.png" />
+    <Resource Include="Image\gait\squirrel\6.png" />
+    <Resource Include="Image\gait\squirrel\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\lynx\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\wolf\1.png" />
+    <Resource Include="Image\gait\wolf\2.png" />
+    <Resource Include="Image\gait\wolf\3.png" />
+    <Resource Include="Image\gait\wolf\4.png" />
+    <Resource Include="Image\gait\wolf\5.png" />
+    <Resource Include="Image\gait\wolf\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="выбор_фон.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\обводка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\sidebar.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

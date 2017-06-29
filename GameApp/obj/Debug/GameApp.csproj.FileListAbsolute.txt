@@ -1,0 +1,17 @@
+c:\users\hp-pc\documents\visual studio 2017\Projects\GameApp\GameApp\bin\Debug\GameApp.exe
+c:\users\hp-pc\documents\visual studio 2017\Projects\GameApp\GameApp\bin\Debug\GameApp.pdb
+c:\users\hp-pc\documents\visual studio 2017\Projects\GameApp\GameApp\obj\Debug\GameApp.csprojResolveAssemblyReference.cache
+c:\users\hp-pc\documents\visual studio 2017\Projects\GameApp\GameApp\obj\Debug\MainWindow.g.cs
+c:\users\hp-pc\documents\visual studio 2017\Projects\GameApp\GameApp\obj\Debug\Screensaver.g.cs
+c:\users\hp-pc\documents\visual studio 2017\Projects\GameApp\GameApp\obj\Debug\App.g.cs
+c:\users\hp-pc\documents\visual studio 2017\Projects\GameApp\GameApp\obj\Debug\GameApp_MarkupCompile.cache
+c:\users\hp-pc\documents\visual studio 2017\Projects\GameApp\GameApp\obj\Debug\GameApp_MarkupCompile.lref
+c:\users\hp-pc\documents\visual studio 2017\Projects\GameApp\GameApp\obj\Debug\MainWindow.baml
+c:\users\hp-pc\documents\visual studio 2017\Projects\GameApp\GameApp\obj\Debug\Screensaver.baml
+c:\users\hp-pc\documents\visual studio 2017\Projects\GameApp\GameApp\obj\Debug\GameApp.g.resources
+c:\users\hp-pc\documents\visual studio 2017\Projects\GameApp\GameApp\obj\Debug\GameApp.Properties.Resources.resources
+c:\users\hp-pc\documents\visual studio 2017\Projects\GameApp\GameApp\obj\Debug\GameApp.csproj.GenerateResource.Cache
+c:\users\hp-pc\documents\visual studio 2017\Projects\GameApp\GameApp\obj\Debug\GameApp.exe
+c:\users\hp-pc\documents\visual studio 2017\Projects\GameApp\GameApp\obj\Debug\GameApp.pdb
+C:\Users\HP-PC\Documents\Visual Studio 2017\Projects\GameApp\GameApp\obj\Debug\Choosing.g.cs
+C:\Users\HP-PC\Documents\Visual Studio 2017\Projects\GameApp\GameApp\obj\Debug\Choosing.baml
