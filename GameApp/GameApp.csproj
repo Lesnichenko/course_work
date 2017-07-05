@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
@@ -48,10 +49,36 @@
     <Compile Include="Choosing.xaml.cs">
       <DependentUpon>Choosing.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CompGamemode\Animals.cs" />
+    <Compile Include="CompGamemode\A_Bear.cs" />
+    <Compile Include="CompGamemode\A_Elk.cs" />
+    <Compile Include="CompGamemode\A_Fox.cs" />
+    <Compile Include="CompGamemode\A_Hare.cs" />
+    <Compile Include="CompGamemode\A_Hedgehog.cs" />
+    <Compile Include="CompGamemode\A_Lynx.cs" />
+    <Compile Include="CompGamemode\A_Squirrel.cs" />
+    <Compile Include="CompGamemode\A_Wolf.cs" />
+    <Compile Include="CompGamemode\CmpAnimal.cs" />
+    <Compile Include="CompGamemode\CmpButton.cs" />
+    <Compile Include="CompGamemode\CmpGame.cs" />
+    <Compile Include="CompGamemode\CmpPage.cs" />
+    <Compile Include="CompGamemode\ResourceControl.cs" />
+    <Compile Include="Menu\GameModeController.cs" />
+    <Compile Include="Menu\MainMenu.cs" />
+    <Compile Include="Menu\Menu.cs" />
+    <Compile Include="Menu\MenuButton.cs" />
+    <Compile Include="Menu\MenuElement.cs" />
+    <Compile Include="Menu\MenuExpandButton.cs" />
     <Compile Include="Screensaver.xaml.cs">
       <DependentUpon>Screensaver.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Test_1.xaml.cs" />
+    <Compile Include="Training.xaml.cs" />
     <Page Include="Choosing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CompGamemode\CmpPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -67,9 +94,21 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Menu\MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Screensaver.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Test_1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Training.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -90,6 +129,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="Fonts\font.otf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -222,7 +262,304 @@
     <Resource Include="Image\обводка.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\sidebar.png" />
+    <Resource Include="Image\Menu\sidebar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\CmpGM\bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\CmpGM\cmp_gmode_title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\CmpGM\AnimalChildren\bear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\CmpGM\AnimalChildren\fox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\CmpGM\AnimalChildren\hare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\CmpGM\AnimalChildren\hedgehog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\CmpGM\AnimalChildren\elk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\CmpGM\AnimalChildren\lynx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\CmpGM\AnimalChildren\squirrel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\CmpGM\AnimalChildren\wolf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\CmpGM\cmp_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\CmpGM\cmp_wrong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\CmpGM\AnimalCmpSuccess\bear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\CmpGM\AnimalCmpSuccess\elk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\CmpGM\AnimalCmpSuccess\fox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\CmpGM\AnimalCmpSuccess\hare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\CmpGM\AnimalCmpSuccess\hedgehog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\CmpGM\AnimalCmpSuccess\lynx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\CmpGM\AnimalCmpSuccess\squirrel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\CmpGM\AnimalCmpSuccess\wolf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\CmpGM\fwd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Menu\button_sidebar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Menu\checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Menu\unchecked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Menu\Preview\game_comparison.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Menu\Preview\game_eating.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Menu\Preview\game_excluding.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Menu\Preview\learn_eating.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Menu\Preview\learn_times.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Menu\Preview\select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Menu\Labels\game_comparison.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Menu\Labels\game_eating.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Menu\Labels\game_excluding.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Menu\Labels\learn_eating.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Menu\Labels\learn_times.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Menu\Labels\select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Menu\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Menu\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Menu\start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\lynx\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\lynx\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\lynx\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\lynx\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\lynx\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\lynx\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gait\lynx\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\food\morkov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\food\rastenia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\food\ryba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\food\seno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\food\yablochko.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\food\грызун.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\food\жук.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\food\орехи.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\food\улитка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\food\черви.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\food\ягоды.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\interface\вперёд.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\interface\зн белый.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\interface\зн черный.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\interface\назад.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\training\1\bear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\training\1\elk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\training\1\fox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\training\1\hare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\training\1\hedgehog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\training\1\lynx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\training\1\squirrel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\training\1\wolf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\training\2\bear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\training\2\elk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\training\2\fox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\training\2\hare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\training\2\hedgehog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\training\2\lynx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\training\2\squirrel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\training\2\wolf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\training\3\bear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\training\3\elk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\training\3\fox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\training\3\hare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\training\3\hedgehog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\training\3\lynx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\training\3\squirrel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\training\3\wolf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\test\неправильный ответ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\test\правильный ответ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\test\_2\bear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\test\_2\fox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\test\_2\hare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\test\_2\hedgehog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\test\_1\bear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\test\_1\elk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\test\_1\fox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\test\_1\hare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\test\_1\hedgehog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\test\_1\lynx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\test\_1\squirrel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\test\_1\wolf.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

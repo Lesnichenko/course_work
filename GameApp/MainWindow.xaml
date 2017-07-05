@@ -4,117 +4,193 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
+        xmlns:local="clr-namespace:GameApp"
+        Name="mainWindow"
         Title="MainWindow" Height="864" Width="1152">
+    
     <Window.Resources>
-        <Storyboard x:Key="Sidebar_In">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
-                <SplineDoubleKeyFrame KeyTime="0" Value="498"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="78"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image1">
-                <SplineDoubleKeyFrame KeyTime="0" Value="389"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="2"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image1">
-                <SplineDoubleKeyFrame KeyTime="0" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="image1">
-                <SplineDoubleKeyFrame KeyTime="0" Value="540"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="720"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="canvas">
-                <SplineDoubleKeyFrame KeyTime="0" Value="500"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="80"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="Bar">
-                <SplineDoubleKeyFrame KeyTime="0" Value="500"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="72"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:2" Value="-2"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Bar">
-                <SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard x:Key="Sidebar_Out">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
-                <SplineDoubleKeyFrame KeyTime="0" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="78"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:2" Value="500"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image1">
-                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:2" Value="398"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="image1">
-                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="360"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:2" Value="540"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="canvas">
-                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="76"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:2" Value="504"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="Bar">
-                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="80"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:2" Value="504"/>
-            </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.HorizontalAlignment)" Storyboard.TargetName="EYE">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static HorizontalAlignment.Center}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.VerticalAlignment)" Storyboard.TargetName="EYE">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static VerticalAlignment.Center}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Control.HorizontalContentAlignment)" Storyboard.TargetName="EYE">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static HorizontalAlignment.Center}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Control.VerticalContentAlignment)" Storyboard.TargetName="EYE">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static VerticalAlignment.Center}"/>
-            </ObjectAnimationUsingKeyFrames>
-        </Storyboard>
+        <ControlTemplate x:Key="menuElementButtonTemplate">
+            <Image Name="menuElementButtonImage" Stretch="Uniform"/>
+        </ControlTemplate>
+        <ControlTemplate x:Key="menuElementTemplate">
+            <Grid ShowGridLines="False" IsHitTestVisible="True">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="9*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="12*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Path Stretch="Fill"
+                      Name="menuElementBackground"
+                      Fill="#00FFFFFF" 
+                      IsHitTestVisible="True"
+                      Grid.Column="0"
+                      Grid.Row="0"
+                      Grid.ColumnSpan="3"
+                      Grid.RowSpan="3">
+                    <Path.Data>
+                        <RectangleGeometry Rect="0,0 1,1"/>
+                    </Path.Data>
+                </Path>
+
+                <Grid Grid.Column="1" Grid.Row="1" ShowGridLines="False" IsHitTestVisible="True">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="6*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Name="menuElementImage"
+                           Grid.Column="0"
+                           IsHitTestVisible="False"/>
+                    <Grid Grid.Column="1" ShowGridLines="False" IsHitTestVisible="False">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="16*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <!--<Image Name="menuElementText"
+                               Grid.Column="1"
+                               IsHitTestVisible="False"/>-->
+                        <Label Grid.Column="1" IsHitTestVisible="False"
+                               Name="menuElementLabel"
+                               Foreground="#FFFFFFFF"
+                               HorizontalContentAlignment="Center"
+                               VerticalContentAlignment="Center">
+                            <Label.Content>
+                                <TextBlock TextWrapping="Wrap" 
+                                           Name="menuElementText"
+                                           TextAlignment="Center"
+                                           FontFamily="./Fonts/#Matias"/>
+                            </Label.Content>
+                        </Label>
+                    </Grid>
+                <local:MenuButton x:Name="menuElementButton"
+                                      Grid.Column="2"
+                                      Template="{StaticResource menuElementButtonTemplate}"
+                                      Cursor="Hand"
+                                  IsHitTestVisible="True"/>
+                </Grid>
+            </Grid>
+        </ControlTemplate>
     </Window.Resources>
+
+    <Window.Background>
+        <ImageBrush ImageSource="/Image/CmpGM/bg.jpg"/>
+    </Window.Background>
+
     <Grid>
-        <Frame x:Name="EYE" HorizontalAlignment="Left" Height="833" VerticalAlignment="Top" Width="1144" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" NavigationUIVisibility="Visible" IsEnabled="False"/>
-        <Image x:Name="image" Margin="-498,0,0,0" Source="sidebar.png" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="498" Stretch="UniformToFill">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Image x:Name="image1" Height="90" Source="button_sidebar.png" Stretch="Fill" VerticalAlignment="Top" Width="90" HorizontalAlignment="Left" d:LayoutOverrides="Width" RenderTransformOrigin="0.5,0.5" MouseDown="image1_MouseDown">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="360"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="1006" Margin="-498,105,0,-222" VerticalAlignment="Top" Width="424" Background="#FFB2B2B2" RenderTransformOrigin="0.5,0.5">
-            <Canvas.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Canvas.RenderTransform>
-        </Canvas>
-        <ScrollBar x:Name="Bar" HorizontalAlignment="Left" Height="604" Margin="-119.413,105,0,0" VerticalAlignment="Top" Width="44.826" Maximum="200" ValueChanged="ScrollBar_ValueChanged" RenderTransformOrigin="0.5,0.5" LargeChange="2">
-            <ScrollBar.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </ScrollBar.RenderTransform>
-        </ScrollBar>
+        <Viewbox>
+            <Frame x:Name="EYE"  HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" NavigationUIVisibility="Hidden" IsEnabled="True"/>
+        </Viewbox>
+
+        <local:Menu x:Name="menuCanvas" HorizontalAlignment="Right">
+
+            <Grid Name="menuGrid" 
+                  Width="{Binding ElementName=mainWindow, Path=ActualWidth}"
+                  Height="{Binding ElementName=mainWindow, Path=ActualHeight}"
+                  ShowGridLines="False">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="/Image/Menu/sidebar.png" 
+                       Stretch="Fill"
+                       Grid.Row="0"
+                       Grid.Column="0"/>
+                <Grid Grid.Column="0"
+                      Grid.Row="0"
+                      ShowGridLines="False">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="6*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="1"
+                          Grid.Row="0"
+                          ShowGridLines="False">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Name="menuBackButton" 
+                                HorizontalAlignment="Left" 
+                                Click="OnButtonClicked"
+                                Cursor="Hand"
+                                Grid.Column="0">
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Image Source="/Image/Menu/back.png"/>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </Grid>
+
+                    <Grid ShowGridLines="False" Grid.Column="1" Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <local:MenuElement x:Name="menuSelect" Grid.Row="0"
+                           Template="{StaticResource menuElementTemplate}"/>
+                        <local:MenuElement x:Name="menuLearnEating" Grid.Row="1"
+                           Template="{StaticResource menuElementTemplate}"/>
+                        <local:MenuElement x:Name="menuLearnTimes"  Grid.Row="2"
+                           Template="{StaticResource menuElementTemplate}"/>
+                        <local:MenuElement x:Name="menuGameEating" Grid.Row="3"
+                           Template="{StaticResource menuElementTemplate}"/>
+                        <local:MenuElement x:Name="menuGameExcluding" Grid.Row="4"
+                           Template="{StaticResource menuElementTemplate}"/>
+                        <local:MenuElement x:Name="menuGameCmp" Grid.Row="5"
+                           Template="{StaticResource menuElementTemplate}"/>
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Column="1" ShowGridLines="False">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="8*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="8*"/>
+                    </Grid.RowDefinitions>
+                    <local:MenuExpandButton x:Name="expanderButton"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Click="OnButtonClicked"
+                            Grid.Column="0"
+                            Grid.Row="0">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Image Source="/Image/Menu/button_sidebar.png"
+                                       Cursor="Hand"
+                                       Name="expanderButtonImage"/>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </local:MenuExpandButton>
+                </Grid>
+            </Grid>
+        </local:Menu>
     </Grid>
 </Window>

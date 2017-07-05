@@ -254,39 +254,39 @@
                         <BitmapImage UriSource="Image/gait/lynx/1.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.087">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.114">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/lynx/1.png" />
+                        <BitmapImage UriSource="Image/gait/lynx/2.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.174">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.229">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/lynx/1.png" />
+                        <BitmapImage UriSource="Image/gait/lynx/3.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.261">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.343">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/lynx/1.png" />
+                        <BitmapImage UriSource="Image/gait/lynx/4.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.348">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.457">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/lynx/1.png" />
+                        <BitmapImage UriSource="Image/gait/lynx/5.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.435">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.571">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/lynx/1.png" />
+                        <BitmapImage UriSource="Image/gait/lynx/6.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.522">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.686">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/lynx/1.png" />
+                        <BitmapImage UriSource="Image/gait/lynx/7.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.609">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.8">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/lynx/1.png" />
+                        <BitmapImage UriSource="Image/gait/lynx/8.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
@@ -505,59 +505,198 @@
                 <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Key="On_2">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Ellips_2">
+                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Off_2">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Ellips_2">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="On_3">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Ellips_3">
+                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Off_3">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Ellips_3">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="On_4">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Ellips_4">
+                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Off_4">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Ellips_4">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="On_5">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Ellips_5">
+                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Off_5">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Ellips_5">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="On_6">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Ellips_6">
+                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Off_6">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Ellips_6">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="On_7">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Ellips_7">
+                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Off_7">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Ellips_7">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="On_8">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Ellips_8">
+                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Off_8">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Ellips_8">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </Page.Resources>
     <Page.Triggers>
-        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="Ellips">
+            <BeginStoryboard x:Name="On_1_BeginStoryboard1" Storyboard="{StaticResource On_1}"/>
             <BeginStoryboard x:Name="fox_BeginStoryboard" Storyboard="{StaticResource fox}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="Ellips">
+            <BeginStoryboard x:Name="Off_1_BeginStoryboard1" Storyboard="{StaticResource Off_1}"/>
+            <PauseStoryboard BeginStoryboardName="fox_BeginStoryboard"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="Ellips_2">
+            <BeginStoryboard x:Name="On_2_BeginStoryboard" Storyboard="{StaticResource On_2}"/>
             <BeginStoryboard x:Name="bear_BeginStoryboard" Storyboard="{StaticResource bear}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="Ellips_2">
+            <BeginStoryboard x:Name="Off_2_BeginStoryboard" Storyboard="{StaticResource Off_2}"/>
+            <PauseStoryboard BeginStoryboardName="bear_BeginStoryboard"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="Ellips_3">
+            <BeginStoryboard x:Name="On_3_BeginStoryboard" Storyboard="{StaticResource On_3}"/>
             <BeginStoryboard x:Name="wolf_BeginStoryboard" Storyboard="{StaticResource wolf}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="Ellips_3">
+            <BeginStoryboard x:Name="Off_3_BeginStoryboard" Storyboard="{StaticResource Off_3}"/>
+            <PauseStoryboard BeginStoryboardName="wolf_BeginStoryboard"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="Ellips_4">
+            <BeginStoryboard x:Name="On_4_BeginStoryboard" Storyboard="{StaticResource On_4}"/>
             <BeginStoryboard x:Name="lynx_BeginStoryboard" Storyboard="{StaticResource lynx}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="Ellips_4">
+            <BeginStoryboard x:Name="Off_4_BeginStoryboard" Storyboard="{StaticResource Off_4}"/>
+            <PauseStoryboard BeginStoryboardName="lynx_BeginStoryboard"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="Ellips_5">
+            <BeginStoryboard x:Name="On_5_BeginStoryboard" Storyboard="{StaticResource On_5}"/>
             <BeginStoryboard x:Name="hare_BeginStoryboard" Storyboard="{StaticResource hare}"/>
-            <BeginStoryboard x:Name="hedgehog_BeginStoryboard" Storyboard="{StaticResource hedgehog}"/>
-            <BeginStoryboard x:Name="squirrel_BeginStoryboard" Storyboard="{StaticResource squirrel}"/>
-            <BeginStoryboard x:Name="elk_BeginStoryboard" Storyboard="{StaticResource elk}"/>
-            <BeginStoryboard x:Name="On_1_BeginStoryboard" Storyboard="{StaticResource On_1}"/>
-            <BeginStoryboard x:Name="Off_1_BeginStoryboard" Storyboard="{StaticResource Off_1}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="Ellips_5">
+            <BeginStoryboard x:Name="Off_5_BeginStoryboard" Storyboard="{StaticResource Off_5}"/>
+            <PauseStoryboard BeginStoryboardName="hare_BeginStoryboard"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="Ellips_6">
+            <BeginStoryboard x:Name="hedgehog_BeginStoryboard" Storyboard="{StaticResource On_6}"/>
+            <BeginStoryboard x:Name="hedgehog_BeginStoryboard1" Storyboard="{StaticResource hedgehog}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="Ellips_6">
+            <BeginStoryboard x:Name="Off_6_BeginStoryboard" Storyboard="{StaticResource Off_6}"/>
+            <PauseStoryboard BeginStoryboardName="hedgehog_BeginStoryboard1"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="Ellips_7">
+            <BeginStoryboard x:Name="squirrel_BeginStoryboard" Storyboard="{StaticResource On_7}"/>
+            <BeginStoryboard x:Name="On_7_BeginStoryboard" Storyboard="{StaticResource squirrel}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="Ellips_7">
+            <BeginStoryboard x:Name="Off_7_BeginStoryboard" Storyboard="{StaticResource Off_7}"/>
+            <PauseStoryboard BeginStoryboardName="On_7_BeginStoryboard"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="Ellips_8">
+            <BeginStoryboard x:Name="elk_BeginStoryboard" Storyboard="{StaticResource On_8}"/>
+            <BeginStoryboard x:Name="elk_BeginStoryboard1" Storyboard="{StaticResource elk}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="Ellips_8">
+            <BeginStoryboard x:Name="Off_8_BeginStoryboard" Storyboard="{StaticResource Off_8}"/>
+            <PauseStoryboard BeginStoryboardName="elk_BeginStoryboard1"/>
         </EventTrigger>
     </Page.Triggers>
 
-    <Canvas>
-        <Image x:Name="Back" HorizontalAlignment="Left" Height="864" Margin="0" VerticalAlignment="Top" Width="1152" Source="выбор_фон.png" Stretch="UniformToFill"/>
-        <Image x:Name="Ellips" Height="228.965" Canvas.Left="69.644" Width="221.888" Source="Image/обводка.png" Canvas.Top="233.035" MouseEnter="Ellips_MouseEnter" MouseLeave="Ellips_MouseLeave"/>
+    <Viewbox Stretch="Fill">
 
-        <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="205.38" VerticalAlignment="Top" Width="186.341" Canvas.Left="84.968" Canvas.Top="245.035">
-            <Image x:Name="image2" Height="86.113" Width="169.854" Source="Image/gait/fox/giphy_1.png" Canvas.Top="52.814" Canvas.Left="10.949"/>
-        </Canvas>
-        <Canvas x:Name="canvas_1" HorizontalAlignment="Left" Height="205.38" VerticalAlignment="Top" Width="186.341" Canvas.Left="348.968" Canvas.Top="245.035">
-            <Image x:Name="image1" Height="86.113" Width="169.854" Source="Image/gait/bear/giphy_1.png" Canvas.Top="52.814" Canvas.Left="10.949"/>
-        </Canvas>
-        <Canvas x:Name="canvas_2" HorizontalAlignment="Left" Height="205.38" VerticalAlignment="Top" Width="186.341" Canvas.Left="618.968" Canvas.Top="245.035">
-            <Image x:Name="image3" Height="86.113" Width="169.854" Source="Image/gait/wolf/1.png" Canvas.Top="52.814" Canvas.Left="10.949"/>
-        </Canvas>
-        <Canvas x:Name="canvas_3" HorizontalAlignment="Left" Height="205.38" VerticalAlignment="Top" Width="186.341" Canvas.Left="885.968" Canvas.Top="245.035">
-            <Image x:Name="image4" Height="86.113" Width="169.854" Source="Image/gait/lynx/1.png" Canvas.Top="52.814" Canvas.Left="10.949"/>
-        </Canvas>
-        <Canvas x:Name="canvas_4" HorizontalAlignment="Left" Height="205.38" VerticalAlignment="Top" Width="186.341" Canvas.Left="84.968" Canvas.Top="497.035">
-            <Image x:Name="image5" Height="98.113" Width="188.44" Source="Image/gait/hare/1.png" Canvas.Top="46.814" Canvas.Left="-0.575"/>
-        </Canvas>
-        <Canvas x:Name="canvas_5" HorizontalAlignment="Left" Height="205.38" VerticalAlignment="Top" Width="186.341" Canvas.Left="348.968" Canvas.Top="497.035">
-            <Image x:Name="image6" Height="95.113" Width="187.606" Source="Image/gait/hedgehog/1.png" Canvas.Top="48.314" Canvas.Left="2.073"/>
-        </Canvas>
-        <Canvas x:Name="canvas_6" HorizontalAlignment="Left" Height="205.38" VerticalAlignment="Top" Width="186.341" Canvas.Left="618.968" Canvas.Top="497.035">
-            <Image x:Name="image7" Height="86.113" Width="169.854" Source="Image/gait/squirrel/1.png" Canvas.Top="52.814" Canvas.Left="10.949"/>
-        </Canvas>
-        <Canvas x:Name="canvas_7" HorizontalAlignment="Left" Height="205.38" VerticalAlignment="Top" Width="186.341" Canvas.Left="885.968" Canvas.Top="497.035">
-            <Image x:Name="image8" Height="114.613" Width="186.341" Source="Image/gait/elk/1.png" Canvas.Top="39.314" RenderTransformOrigin="0.5,0.5">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-        </Canvas>
+        <Grid Height="864" Width="1152">
+            <Image x:Name="Back" HorizontalAlignment="Left" Height="864" Margin="0" VerticalAlignment="Top" Width="1152" Source="выбор_фон.png" Stretch="UniformToFill"/>
+            <Grid x:Name="canvas" HorizontalAlignment="Left" Height="205.38" VerticalAlignment="Top" Width="186.341" Margin="84.968,245.035,0,0" d:LayoutOverrides="HorizontalAlignment">
+                <Image x:Name="image2" Source="Image/gait/fox/giphy_1.png" Margin="10.949,52.814,5.538,66.453"/>
+            </Grid>
+            <Image x:Name="Ellips" Width="221.888" Source="Image/обводка.png" Opacity="0" MouseDown="Ellips_MouseDown" HorizontalAlignment="Left" Margin="69.644,233.035,0,402"/>
+            <Grid x:Name="canvas_1" HorizontalAlignment="Left" Height="205.38" VerticalAlignment="Top" Width="186.341" Margin="348.968,245.035,0,0" d:LayoutOverrides="HorizontalAlignment">
+                <Image x:Name="image1" Source="Image/gait/bear/giphy_1.png" Margin="10.949,52.814,5.538,66.453"/>
+            </Grid>
+            <Image x:Name="Ellips_2" Width="221.888" Source="Image/обводка.png" Opacity="0" MouseDown="Ellips_2_MouseDown" HorizontalAlignment="Left" Margin="335.644,233.035,0,402"/>
+            <Grid x:Name="canvas_2" HorizontalAlignment="Left" Height="205.38" VerticalAlignment="Top" Width="186.341" Margin="618.968,245.035,0,0">
+                <Image x:Name="image3" Source="Image/gait/wolf/1.png" Margin="10.949,52.814,5.538,66.453"/>
+            </Grid>
+            <Image x:Name="Ellips_3" Width="221.888" Source="Image/обводка.png" Opacity="0" MouseDown="Ellips_3_MouseDown" HorizontalAlignment="Right" Margin="0,233.035,328.468,402"/>
+            <Grid x:Name="canvas_3" HorizontalAlignment="Left" Height="205.38" VerticalAlignment="Top" Width="186.341" Margin="885.968,245.035,0,0">
+                <Image x:Name="image4" Source="Image/gait/lynx/1.png" Margin="10.949,52.814,5.538,66.453"/>
+            </Grid>
+            <Image x:Name="Ellips_4" Width="221.888" Source="Image/обводка.png" Opacity="0" MouseDown="Ellips_4_MouseDown" HorizontalAlignment="Right" Margin="0,233.035,60.468,402"/>
+            <Grid x:Name="canvas_4" HorizontalAlignment="Left" Height="205.38" VerticalAlignment="Top" Width="186.341" Margin="84.968,497.035,0,0" d:LayoutOverrides="HorizontalAlignment">
+                <Image x:Name="image5" Source="Image/gait/hare/1.png" Margin="-0.575,46.814,-1.524,60.453"/>
+            </Grid>
+            <Image x:Name="Ellips_5" Height="224.965" Width="221.888" Source="Image/обводка.png" MouseDown="Ellips_5_MouseDown" HorizontalAlignment="Left" Margin="69.644,0,0,146" VerticalAlignment="Bottom" Opacity="0.0"/>
+            <Grid x:Name="canvas_5" HorizontalAlignment="Left" Height="205.38" VerticalAlignment="Top" Width="186.341" Margin="348.968,497.035,0,0" d:LayoutOverrides="HorizontalAlignment">
+                <Image x:Name="image6" Source="Image/gait/hedgehog/1.png" Margin="2.073,48.314,-3.338,61.953"/>
+            </Grid>
+            <Image x:Name="Ellips_6" Height="224.965" Width="221.888" Source="Image/обводка.png" MouseDown="Ellips_6_MouseDown" HorizontalAlignment="Left" Margin="336.644,0,0,146" VerticalAlignment="Bottom" Opacity="0.0"/>
+            <Grid x:Name="canvas_6" HorizontalAlignment="Left" Height="205.38" VerticalAlignment="Top" Width="186.341" Margin="618.968,497.035,0,0">
+                <Image x:Name="image7" Source="Image/gait/squirrel/1.png" Margin="10.949,52.814,5.538,66.453"/>
+            </Grid>
+            <Image x:Name="Ellips_7" Height="224.965" Width="221.888" Source="Image/обводка.png" MouseDown="Ellips_7_MouseDown" HorizontalAlignment="Right" Margin="0,0,328.468,149" VerticalAlignment="Bottom" Opacity="0.0"/>
+            <Grid x:Name="canvas_7" HorizontalAlignment="Left" Height="205.38" VerticalAlignment="Top" Width="186.341" Margin="885.968,497.035,0,0">
+                <Image x:Name="image8" Source="Image/gait/elk/1.png" RenderTransformOrigin="0.5,0.5" Margin="0,39.314,0,51.453">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+            </Grid>
+            <Image x:Name="Ellips_8" Height="224.965" Width="221.888" Source="Image/обводка.png" MouseDown="Ellips_8_MouseDown" HorizontalAlignment="Right" Margin="0,0,60.468,148" VerticalAlignment="Bottom" Opacity="0.0"/>
+            <Image x:Name="back_button" Height="89.071" Width="174" Source="Image/interface/назад.png" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom"/>
 
-    </Canvas>
+        </Grid>
+    </Viewbox>
 </Page>

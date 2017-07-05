@@ -1,25 +1,85 @@
 ﻿using System;
 
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media.Animation;
 
 using System.Windows.Input;
 
-using System.Windows.Media.Animation;
 
 namespace GameApp
 {
 
     public partial class MainWindow : Window
     {
+        public static MainWindow last;
+        public GameModeController m_gmCtl;
+
         public MainWindow()
         {
-            InitializeComponent();
-            EYE.NavigationService.Navigate(new Uri("Choosing.xaml", UriKind.Relative));
-        }
-        bool isFlip = false;
-        double valueold = 0;
+            last = this;
 
-        private void ScrollBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+            InitializeComponent();
+            //EYE.NavigationService.Navigate(new Uri("Choosing.xaml", UriKind.Relative));
+            //EYE.NavigationService.Navigate(new Uri("/CompGamemode/CmpPage.xaml", UriKind.Relative));
+            /*CompGamemode.CmpPage cmpPage = new CompGamemode.CmpPage();
+            EYE.Navigate(cmpPage);
+            cmpPage.StartGame();*/
+
+            m_gmCtl = new GameModeController();
+
+            this.Loaded      += OnWindowLoaded;
+            this.SizeChanged += OnSizeChanged;
+        }
+
+        private void OnWindowLoaded(object sender, RoutedEventArgs args)
+        {
+            
+        }
+
+        private void OnSizeChanged(object sender, SizeChangedEventArgs args)
+        {
+            menuCanvas.Width = ActualWidth * 1.333333;
+            menuCanvas.Height = ActualHeight;
+
+            //menuCanvas.Resize(args.NewSize.Width * 1.333333, args.NewSize.Height, args.NewSize.Width, args.NewSize.Height);
+
+            //menuCanvas.OnSizeChanged(sender, args);
+        }
+
+        private void OnButtonClicked(object sender, RoutedEventArgs args)
+        {
+            /*Button b = (Button)sender;
+
+            if (b.Name == "menuElementButton")
+            { 
+                MessageBox.Show(b.GetHashCode().ToString());
+            }*/
+
+            menuCanvas.OnButtonClicked(sender);
+        }
+
+        /*private void TestClick(object sender, RoutedEventArgs args)
+        {
+            Storyboard sb = new Storyboard();
+            DoubleAnimation anim = new DoubleAnimation();
+
+            anim.Duration = TimeSpan.FromSeconds(3);
+            Canvas.SetLeft(menuGrid, menuCanvas.ActualWidth - Canvas.GetRight(menuGrid) - menuGrid.ActualWidth);
+            anim.From = Canvas.GetLeft(menuGrid);
+            anim.To = 0;
+
+            sb.Duration = TimeSpan.FromSeconds(3);
+            sb.Children.Add(anim);
+
+            Storyboard.SetTarget(sb, menuGrid);
+            Storyboard.SetTargetProperty(sb, new PropertyPath("(Canvas.Left)"));
+            BeginStoryboard(sb);
+        }*/
+        /*bool isFlip = false;
+        double valueold = 0;*/
+
+       /* private void ScrollBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             double Y_top = canvas.Margin.Top;
             double Y_bot = canvas.Margin.Bottom;
@@ -40,7 +100,7 @@ namespace GameApp
             }
             canvas.Margin = new Thickness(Y_lef, dY_down, Y_rig, dY_up);
             valueold = Bar.Value;
-        }
+        }*/
 
         // управление Canvas через клик мыши
         /*
@@ -74,7 +134,7 @@ namespace GameApp
         */
 
 
-        private void image1_MouseDown(object sender, MouseButtonEventArgs e)
+        /*private void image1_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Storyboard Sidebar_In = (Storyboard)FindResource("Sidebar_In");
             Storyboard Sidebar_Out = (Storyboard)FindResource("Sidebar_Out");
@@ -88,7 +148,7 @@ namespace GameApp
                 Sidebar_In.Begin(this);
                 isFlip = false;
             }
-        }
+        }*/
     }
    
 }

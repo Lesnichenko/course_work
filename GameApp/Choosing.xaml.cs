@@ -19,23 +19,78 @@ namespace GameApp
     /// </summary>
     public partial class Choosing : Page
     {
-        public Choosing()
+        private GameModeController m_gmCtl;
+
+        public Choosing(GameModeController gmCtl)
         {
+            m_gmCtl = gmCtl;
+
             InitializeComponent();
         }
 
-        private void Ellips_MouseEnter(object sender, MouseEventArgs e)
+        static public int Num_Animal;
+        // 1 - лиса    // 5 - заяц
+        // 2 - медведь // 6 - еж
+        // 3 - волк    // 7 - белка
+        // 4 - рысь    // 8 - лось
+
+        private void Ellips_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Storyboard On_1 = (Storyboard)FindResource("On_1");
-            
-            On_1.Begin(this);
+            Num_Animal = 1;
+            //NavigationService.Navigate(new Uri("/Training.xaml", UriKind.Relative));
+            m_gmCtl.NextGame();
         }
 
-        private void Ellips_MouseLeave(object sender, MouseEventArgs e)
+        private void Ellips_2_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Storyboard Off_1 = (Storyboard)FindResource("Off_1");
+            Num_Animal = 2;
+            //NavigationService.Navigate(new Uri("/Training.xaml", UriKind.Relative));
+            m_gmCtl.NextGame();
+        }
 
-            Off_1.Begin(this);
+        private void Ellips_3_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Num_Animal = 3;
+            // NavigationService.Navigate(new Uri("/Training.xaml", UriKind.Relative));
+            m_gmCtl.NextGame();
+        }
+
+        private void Ellips_4_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Num_Animal = 4;
+            //NavigationService.Navigate(new Uri("/Training.xaml", UriKind.Relative));
+
+            m_gmCtl.NextGame();
+        }
+
+        private void Ellips_5_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Num_Animal = 5;
+            //NavigationService.Navigate(new Uri("/Training.xaml", UriKind.Relative));
+
+            m_gmCtl.NextGame();
+        }
+
+        private void Ellips_6_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Num_Animal = 6;
+            //NavigationService.Navigate(new Uri("/Training.xaml", UriKind.Relative));
+
+            m_gmCtl.NextGame();
+        }
+
+        private void Ellips_7_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Num_Animal = 7;
+            //NavigationService.Navigate(new Uri("/Training.xaml", UriKind.Relative));
+            m_gmCtl.NextGame();
+        }
+
+        private void Ellips_8_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Num_Animal = 8;
+            //NavigationService.Navigate(new Uri("/Training.xaml", UriKind.Relative));
+            m_gmCtl.NextGame();
         }
     }
 }

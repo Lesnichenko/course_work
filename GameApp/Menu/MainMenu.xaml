@@ -1,0 +1,53 @@
+﻿<Page x:Class="GameApp.MainMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GameApp"
+      mc:Ignorable="d" 
+      Title="MainMenu">
+
+    <Grid>
+        <Image Source="/Image/CmpGM/bg.jpg"
+               Stretch="Fill"
+               Visibility="Hidden"/>
+        <Grid ShowGridLines="False">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Row="0"
+                    Grid.Column="1"
+                    VerticalAlignment="Bottom"
+                    Click="OnButtonClick"
+                    Name="startButton"
+                    Cursor="Hand">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source="/Image/Menu/start.png" Stretch="Uniform"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Grid.Row="2"
+                    Grid.Column="1"
+                    VerticalAlignment="Top"
+                    Name="exitButton"
+                    Click="OnButtonClick"
+                    Cursor="Hand">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source="/Image/Menu/exit.png" Stretch="Uniform"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
+    </Grid>
+</Page>
