@@ -8,6 +8,10 @@
       Title="CmpPage">
 
     <Page.Resources>
+        <Style x:Key="gridStyle" TargetType="Grid">
+            <Setter Property="ShowGridLines" Value="False"/>
+        </Style>
+        
         <ControlTemplate x:Key="ButtonTemplate">
             <Grid>
                 <Path Name="ButtonEllipse"  Stretch="Uniform" Fill="#FFFFFFFF">
@@ -17,7 +21,7 @@
                 </Path>
                 <Grid Width="{Binding ElementName=ButtonEllipse, Path=ActualWidth}" 
                       Height="{Binding ElementName=ButtonEllipse, Path=ActualWidth}"
-                      ShowGridLines="False"
+                      Style="{StaticResource gridStyle}"
                       IsHitTestVisible="False">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
@@ -34,6 +38,21 @@
                            Grid.Column="1"
                            Name="ButtonImage"
                            IsHitTestVisible="False"/>
+                    <Grid Style="{StaticResource gridStyle}"
+                          Grid.Column="1"
+                          Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="3*"/>
+                        </Grid.RowDefinitions>
+
+                        <Image Grid.Row="0" 
+                               HorizontalAlignment="Center" 
+                               VerticalAlignment="Center" 
+                               Stretch="Uniform"
+                               Name="ButtonCheckImage"
+                               Source="/Image/CmpGM/cmp_right.png"/>
+                    </Grid>
                 </Grid>
                 <Image IsHitTestVisible="False"
                        Name="ButtonAnimImage"
@@ -55,7 +74,7 @@
     <Grid >
         <Image Name="backgroundImage" Stretch="Fill" Panel.ZIndex="0" Visibility="Hidden"/>
         <Grid Panel.ZIndex="1" 
-              ShowGridLines="False"
+              Style="{StaticResource gridStyle}"
               Name="pageMainGrid">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -69,7 +88,7 @@
                 <RowDefinition Height="0.25*"/>
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0" Grid.ColumnSpan="3" Grid.Column="0" ShowGridLines="False">
+            <Grid Grid.Row="0" Grid.ColumnSpan="3" Grid.Column="0" Style="{StaticResource gridStyle}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="4*"/>
@@ -80,11 +99,20 @@
                        HorizontalAlignment="Center"
                        VerticalAlignment="Bottom"
                        Stretch="Uniform"/>
+
+                <!--<Label Name="titleLabel" 
+                       VerticalContentAlignment="Bottom" 
+                       HorizontalContentAlignment="Center"
+                       FontFamily="/Fonts/#Matias"
+                       Content="ПОМОГИ ДЕТЕНЫШАМ НАЙТИ МАМУ"
+                       Foreground="#7D5B17"                         
+                       Grid.Column="1"
+                       FontWeight="Heavy"/>-->
             </Grid>
 
             <Grid Grid.Row="1"
                   Grid.Column="0"
-                  ShowGridLines="False">
+                  Style="{StaticResource gridStyle}">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition Height="8*"/>
@@ -105,7 +133,7 @@
 
             <Grid Grid.Row="1"
                   Grid.Column="1"
-                  ShowGridLines="False">
+                  Style="{StaticResource gridStyle}">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition Height="8*"/>
@@ -126,7 +154,7 @@
 
             <Grid Grid.Row="1"
                   Grid.Column="2"
-                  ShowGridLines="False">
+                  Style="{StaticResource gridStyle}">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition Height="8*"/>
@@ -147,7 +175,7 @@
 
             <Grid Grid.Row="2"
                   Grid.Column="0"
-                  ShowGridLines="False">
+                  Style="{StaticResource gridStyle}">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition Height="2*"/>
@@ -168,7 +196,7 @@
 
             <Grid Grid.Row="2"
                   Grid.Column="1"
-                  ShowGridLines="False">
+                  Style="{StaticResource gridStyle}">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition Height="2*"/>
@@ -189,7 +217,7 @@
 
             <Grid Grid.Row="2"
                   Grid.Column="2"
-                  ShowGridLines="False">
+                  Style="{StaticResource gridStyle}">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition Height="2*"/>
@@ -207,6 +235,7 @@
                         Template="{StaticResource ButtonTemplate}"
                         Style="{StaticResource ButtonStyle}"/>
             </Grid>
+            
             <Button Grid.Row="3"
                     Grid.Column="2" 
                     Style="{StaticResource ButtonStyle}"
@@ -220,6 +249,20 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
+
+            <Button Grid.Row="3"
+                    Grid.Column="0" 
+                    Style="{StaticResource ButtonStyle}"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Click="RestartButtonClick"
+                    Name="restartButton">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source="/Image/Menu/back.png" Stretch="Uniform"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
         </Grid>
         <Canvas Name="messageCanvas"  
                 Panel.ZIndex="3" Background="#00000000">
@@ -227,7 +270,7 @@
                    Width="{Binding ElementName=messageCanvas, Path=ActualWidth}"
                    Height="{Binding ElementName=messageCanvas, Path=ActualHeight}"
                    Stretch="Fill"/>-->
-            <Grid ShowGridLines="False" IsHitTestVisible="False"
+            <Grid Style="{StaticResource gridStyle}" IsHitTestVisible="False"
                   Width="{Binding ElementName=messageCanvas, Path=ActualWidth}"
                   Height="{Binding ElementName=messageCanvas, Path=ActualHeight}">
                 <Grid.RowDefinitions>

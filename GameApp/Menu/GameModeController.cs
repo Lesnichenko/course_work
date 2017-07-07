@@ -10,6 +10,7 @@ namespace GameApp
         private Choosing m_Choosing;
         private Test_1 m_Test1;
         private Training m_Training;
+        private Test_2 m_Test2;
         private MenuElement.MenuElementType m_eCurrentGame;
 
         public GameModeController()
@@ -19,12 +20,14 @@ namespace GameApp
             m_Choosing = new Choosing(this);
             m_Test1 = new Test_1(this);
             m_Training = new Training(this);
+            m_Test2 = new Test_2(this);
 
             MainWindow.last.EYE.Navigate(m_MainMenu);
         }
          
         public void StartGame()
         {
+            UnselectCurrent();
             m_eCurrentGame = MenuElement.MenuElementType.ME_NONE;
             NextGame();
         }
@@ -105,7 +108,12 @@ namespace GameApp
                     break;
                 case MenuElement.MenuElementType.ME_GAME_EXCLUDING:
                     if (MainWindow.last.menuGameExcluding.IsChecked())
+                    {
                         MainWindow.last.menuGameExcluding.Select();
+                        MainWindow.last.EYE.Navigate(m_Test2);
+                        m_Test2.StartGame();
+                        return;
+                    }
                     break;
                 case MenuElement.MenuElementType.ME_CAME_COMPARISON:
                     if (MainWindow.last.menuGameCmp.IsChecked())

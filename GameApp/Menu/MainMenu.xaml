@@ -7,11 +7,17 @@
       mc:Ignorable="d" 
       Title="MainMenu">
 
+    <Page.Resources>
+        <Style x:Key="gridStyle" TargetType="Grid">
+            <Setter Property="ShowGridLines" Value="False"/>
+        </Style>
+    </Page.Resources>
+
     <Grid>
         <Image Source="/Image/CmpGM/bg.jpg"
                Stretch="Fill"
                Visibility="Hidden"/>
-        <Grid ShowGridLines="False">
+        <Grid Style="{StaticResource gridStyle}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition Width="2*"/>
@@ -48,6 +54,35 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
+
+            <Grid Style="{StaticResource gridStyle}"
+                  Grid.Column="0"
+                  Grid.Row="2">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="0.4*"/>
+                    <RowDefinition Height="0.3*"/>
+                </Grid.RowDefinitions>
+
+                <Button Name="aboutBtn"
+                        Cursor="Hand"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Click="OnAboutButtonClicked">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="/Image/Menu/btn_about.png"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
         </Grid>
     </Grid>
 </Page>

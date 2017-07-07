@@ -39,12 +39,24 @@ namespace GameApp
 
         private void OnSizeChanged(object sender, SizeChangedEventArgs args)
         {
-            menuCanvas.Width = ActualWidth * 1.333333;
-            menuCanvas.Height = ActualHeight;
+            menuCanvas.Width = mainWindowMainGrid.ActualWidth * 1.333333;
+            menuCanvas.Height = mainWindowMainGrid.ActualHeight;
 
             //menuCanvas.Resize(args.NewSize.Width * 1.333333, args.NewSize.Height, args.NewSize.Width, args.NewSize.Height);
 
             //menuCanvas.OnSizeChanged(sender, args);
+        }
+
+        public void ShowAbout()
+        {
+            mainViewBox.Visibility = Visibility.Collapsed;
+            aboutGrid.Visibility = Visibility.Visible;
+        }
+
+        public void HideAbout()
+        {
+            mainViewBox.Visibility = Visibility.Visible;
+            aboutGrid.Visibility = Visibility.Collapsed;
         }
 
         private void OnButtonClicked(object sender, RoutedEventArgs args)
@@ -55,6 +67,12 @@ namespace GameApp
             { 
                 MessageBox.Show(b.GetHashCode().ToString());
             }*/
+
+            if(sender.Equals(aboutBtnClose))
+            {
+                HideAbout();
+                return;
+            }
 
             menuCanvas.OnButtonClicked(sender);
         }

@@ -33,6 +33,12 @@ namespace GameApp.CompGamemode
             m_bPageLoaded = m_bNeedStart = false;
 
             this.Loaded += OnPageLoad;
+            this.SizeChanged += OnSizeChanged;
+        }
+
+        private void OnSizeChanged(object sender, SizeChangedEventArgs args)
+        {
+            //titleLabel.FontSize = ActualHeight * 0.08;
         }
 
         public void StartGame()
@@ -123,6 +129,11 @@ namespace GameApp.CompGamemode
         {
             //m_Game.RestartGame();
             m_gmCtl.NextGame();
+        }
+
+        public void RestartButtonClick(object sender, RoutedEventArgs args)
+        {
+            StartGame();
         }
 
         /*public void TestClick(object sender, RoutedEventArgs args)

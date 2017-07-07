@@ -73,9 +73,21 @@ namespace GameApp
         {
             if (sender.Equals(MainWindow.last.expanderButton))
                 ExpanderAction();
-
-            if (sender.Equals(MainWindow.last.menuBackButton))
+            else if (sender.Equals(MainWindow.last.menuBackButton))
+            {
                 MainWindow.last.m_gmCtl.BackToMenu();
+                HideMenu();
+            }
+            else if (sender.Equals(MainWindow.last.menuBtnStart))
+            {
+                MainWindow.last.m_gmCtl.StartGame();
+                HideMenu();
+            }
+            else if (sender.Equals(MainWindow.last.menuBtnAbout))
+            {
+                MainWindow.last.ShowAbout();
+                HideMenu();
+            }
         }
 
         public void OnSizeChanged(object sender, SizeChangedEventArgs args)
@@ -131,7 +143,7 @@ namespace GameApp
             MainWindow.last.expanderButton.SetRotation(0);
            
             anim.From       = GetLeft(MainWindow.last.menuGrid);
-            anim.To         = ActualWidth - MainWindow.last.menuGrid.ActualWidth;
+            anim.To         = ActualWidth - MainWindow.last.mainWindowMainGrid.ActualWidth;
             anim.Duration   = TimeSpan.FromSeconds(m_dSecondsPerDot * Math.Abs((double)(anim.To - anim.From)));
             anim.Completed += OnExpandActionComplete;
 
@@ -159,6 +171,9 @@ namespace GameApp
         {
             DoubleAnimation anim = new DoubleAnimation();
 
+            if (m_eState == ExpanderState.ES_HIDDEN)
+                return;
+
             MainWindow.last.expanderButton.SetRotation(180);
 
             anim.From = GetLeft(MainWindow.last.menuGrid);
@@ -177,7 +192,7 @@ namespace GameApp
             MainWindow.last.menuGrid.BeginAnimation(Canvas.LeftProperty, null);
 
             if (m_eState == ExpanderState.ES_EXPANDED || m_eState == ExpanderState.ES_EXPAND_ANIMATION)
-                SetLeft(MainWindow.last.menuGrid, ActualWidth - MainWindow.last.menuGrid.ActualWidth);
+                SetLeft(MainWindow.last.menuGrid, ActualWidth - MainWindow.last.mainWindowMainGrid.ActualWidth);
             else
                 SetLeft(MainWindow.last.menuGrid, 0);
                

@@ -11,10 +11,11 @@ namespace GameApp.CompGamemode
 {
     public enum CmpButtonState
     {
-        CBS_DEFAULT  = 0x0,
-        CBS_HOVER    = 0x1,
-        CBS_CHECKED  = 0x2,
-        CBS_DISABLED = 0x4,
+        CBS_DEFAULT    = 0x0,
+        CBS_HOVER      = 0x1,
+        CBS_CHECKED    = 0x2,
+        CBS_DISABLED   = 0x4,
+        CBS_SHOW_CHECK = 0x8,
     };
 
     public class CmpButton : Button
@@ -26,6 +27,7 @@ namespace GameApp.CompGamemode
 
         private int                m_nState;
         private CmpButtonCallback  m_Callback;
+        private Image m_CheckImg;
         private static ImageSource m_WrongImage = null;
         private static ImageSource m_RightImage = null;
 
@@ -60,6 +62,11 @@ namespace GameApp.CompGamemode
                 m_Callback.OnClick((m_nState & (int)CmpButtonState.CBS_CHECKED) != 0);
         }
 
+        public override void OnApplyTemplate()
+        {
+            m_CheckImg = (Image)GetTemplateChild("ButtonCheckImage");
+        }
+
         public void SetImage(string imagePath)
         {
             Image img = (Image)this.GetTemplateChild("ButtonImage");
@@ -70,14 +77,24 @@ namespace GameApp.CompGamemode
         private void OnSizeChanged(object sender, RoutedEventArgs args)
         {
             Path ellipsePath = (Path)this.GetTemplateChild("ButtonEllipse");
+
+            if((m_nState & (int)CmpButtonState.CBS_SHOW_CHECK) != 0)
+            {
+                ellipsePath.Stroke = new SolidColorBrush(Color.FromRgb(87, 135, 70));
+                ellipsePath.StrokeThickness = ellipsePath.ActualWidth * 0.05;
+                m_CheckImg.Opacity = 0.75;
+                return;
+            }
     
-            ellipsePath.Stroke = new SolidColorBrush(Color.FromRgb(128, 0, 0));
+            ellipsePath.Stroke = new SolidColorBrush(Color.FromRgb(/*128, 0, 0*/ 125, 91, 23));
 
             if ((m_nState & (int)CmpButtonState.CBS_CHECKED) != 0 || 
                 (m_nState & (int)CmpButtonState.CBS_HOVER) != 0)
                 ellipsePath.StrokeThickness = ellipsePath.ActualWidth * 0.025;
             else
                 ellipsePath.StrokeThickness = 0.0;
+
+            m_CheckImg.Opacity = 0.0;
         }
 
         public void EnableState(CmpButtonState eState)
@@ -95,6 +112,11 @@ namespace GameApp.CompGamemode
         public void UpdateButton()
         {
             OnSizeChanged(this, null);
+
+            if ((m_nState & (int)CmpButtonState.CBS_SHOW_CHECK) != 0)
+                Cursor = Cursors.Arrow;
+            else
+                Cursor = Cursors.Hand;
         }
 
         protected override void OnMouseEnter(MouseEventArgs e)
@@ -131,7 +153,7 @@ namespace GameApp.CompGamemode
 
         public void RightAnimation()
         {
-            const int    nFlashCount = 8, nTotalCount = nFlashCount * 2 + 1;
+            const int    nFlashCount = 8, nTotalCount = nFlashCount * 2;
             const double dFrameTime = 0.3;
 
             Image                         img = (Image)this.GetTemplateChild("ButtonAnimImage");
@@ -154,8 +176,14 @@ namespace GameApp.CompGamemode
 
             anim.KeyFrames = kfCollection;
             anim.Duration  = TimeSpan.FromSeconds(dCurTime);
+            anim.Completed += OnRightAnimationComplete;
 
             img.BeginAnimation(Image.OpacityProperty, anim);
+        }
+
+        private void OnRightAnimationComplete(object sender, EventArgs args)
+        {
+            EnableState(CmpButtonState.CBS_SHOW_CHECK);
         }
 
         public void WrongAnimation()

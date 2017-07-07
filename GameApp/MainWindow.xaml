@@ -9,11 +9,26 @@
         Title="MainWindow" Height="864" Width="1152">
     
     <Window.Resources>
-        <ControlTemplate x:Key="menuElementButtonTemplate">
+        <Style x:Key="gridShow" TargetType="Grid">
+            <Setter Property="ShowGridLines" Value="False"/>
+        </Style>
+
+        <Style x:Key="menuElementStyle" TargetType="local:MenuElement">
+            <Style.Setters>
+                <Setter Property="Cursor" Value="Hand"/>
+            </Style.Setters>
+            <Style.Triggers>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Cursor" Value="Hand"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!--<ControlTemplate x:Key="menuElementButtonTemplate">
             <Image Name="menuElementButtonImage" Stretch="Uniform"/>
-        </ControlTemplate>
+        </ControlTemplate>-->
         <ControlTemplate x:Key="menuElementTemplate">
-            <Grid ShowGridLines="False" IsHitTestVisible="True">
+            <Grid IsHitTestVisible="True" Style="{StaticResource gridShow}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="9*"/>
@@ -26,6 +41,13 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
+                <Rectangle Fill="#00FFFFFF" Name="menuElementBackground" 
+                      Grid.Column="0"
+                      Grid.Row="0"
+                      Grid.ColumnSpan="3"
+                      Grid.RowSpan="3"/>
+
+                <!--
                 <Path Stretch="Fill"
                       Name="menuElementBackground"
                       Fill="#00FFFFFF" 
@@ -37,9 +59,9 @@
                     <Path.Data>
                         <RectangleGeometry Rect="0,0 1,1"/>
                     </Path.Data>
-                </Path>
+                </Path> -->
 
-                <Grid Grid.Column="1" Grid.Row="1" ShowGridLines="False" IsHitTestVisible="True">
+                <Grid Grid.Column="1" Grid.Row="1" Style="{StaticResource gridShow}" IsHitTestVisible="True">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="3*"/>
                         <ColumnDefinition Width="6*"/>
@@ -49,7 +71,7 @@
                     <Image Name="menuElementImage"
                            Grid.Column="0"
                            IsHitTestVisible="False"/>
-                    <Grid Grid.Column="1" ShowGridLines="False" IsHitTestVisible="False">
+                    <Grid Grid.Column="1" Style="{StaticResource gridShow}" IsHitTestVisible="False">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="16*"/>
@@ -62,21 +84,22 @@
                         <Label Grid.Column="1" IsHitTestVisible="False"
                                Name="menuElementLabel"
                                Foreground="#FFFFFFFF"
-                               HorizontalContentAlignment="Center"
+                               HorizontalContentAlignment="Left"
                                VerticalContentAlignment="Center">
                             <Label.Content>
                                 <TextBlock TextWrapping="Wrap" 
                                            Name="menuElementText"
-                                           TextAlignment="Center"
+                                           TextAlignment="Left"
                                            FontFamily="./Fonts/#Matias"/>
                             </Label.Content>
                         </Label>
                     </Grid>
-                <local:MenuButton x:Name="menuElementButton"
+                <!--<local:MenuButton x:Name="menuElementButton"
                                       Grid.Column="2"
                                       Template="{StaticResource menuElementButtonTemplate}"
                                       Cursor="Hand"
-                                  IsHitTestVisible="True"/>
+                                  IsHitTestVisible="True"/>-->
+                    <Image Name="menuElementCheckImage" Stretch="Uniform" Grid.Column="2"/>
                 </Grid>
             </Grid>
         </ControlTemplate>
@@ -86,17 +109,53 @@
         <ImageBrush ImageSource="/Image/CmpGM/bg.jpg"/>
     </Window.Background>
 
-    <Grid>
-        <Viewbox>
+    <Grid Name="mainWindowMainGrid">
+        <Viewbox Panel.ZIndex="0"
+                 Name="mainViewBox">
             <Frame x:Name="EYE"  HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" NavigationUIVisibility="Hidden" IsEnabled="True"/>
         </Viewbox>
 
-        <local:Menu x:Name="menuCanvas" HorizontalAlignment="Right">
+        <Grid Name="aboutGrid" 
+              Style="{StaticResource gridShow}"
+              Panel.ZIndex="1"
+              Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Column="1"
+                   Grid.Row="1"
+                   Source="/Image/about.png"/>
+
+            <Button Name="aboutBtnClose"
+                    Click="OnButtonClicked"
+                    Cursor="Hand"
+                    Grid.Column="1"
+                    Grid.Row="2">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source="/Image/Menu/back.png"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
+
+        <local:Menu x:Name="menuCanvas" 
+                    HorizontalAlignment="Right"
+                    Panel.ZIndex="2">
 
             <Grid Name="menuGrid" 
-                  Width="{Binding ElementName=mainWindow, Path=ActualWidth}"
-                  Height="{Binding ElementName=mainWindow, Path=ActualHeight}"
-                  ShowGridLines="False">
+                  Width="{Binding ElementName=mainWindowMainGrid, Path=ActualWidth}"
+                  Height="{Binding ElementName=mainWindowMainGrid, Path=ActualHeight}"
+                  Style="{StaticResource gridShow}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="2*"/>
@@ -108,7 +167,7 @@
                        Grid.Column="0"/>
                 <Grid Grid.Column="0"
                       Grid.Row="0"
-                      ShowGridLines="False">
+                      Style="{StaticResource gridShow}">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="6*"/>
@@ -123,11 +182,12 @@
 
                     <Grid Grid.Column="1"
                           Grid.Row="0"
-                          ShowGridLines="False">
+                          Style="{StaticResource gridShow}">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="2*"/>
                         </Grid.ColumnDefinitions>
+                        
                         <Button Name="menuBackButton" 
                                 HorizontalAlignment="Left" 
                                 Click="OnButtonClicked"
@@ -139,9 +199,53 @@
                                 </ControlTemplate>
                             </Button.Template>
                         </Button>
+
+                        <Grid Style="{StaticResource gridShow}"
+                              Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="8*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="9*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Grid.Column="1" Grid.Row="1" Style="{StaticResource gridShow}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="0.1*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <local:MenuSoundButton x:Name="menuBtnSound"
+                                                       Grid.Column="0"
+                                                       Cursor="Hand"
+                                                       Click="OnButtonClicked">
+                                    <local:MenuSoundButton.Template>
+                                        <ControlTemplate>
+                                            <Image Name="buttonImg"/>
+                                        </ControlTemplate>
+                                    </local:MenuSoundButton.Template>
+                                </local:MenuSoundButton>
+
+                                <Button Grid.Column="2"
+                                        Cursor="Hand"
+                                        Click="OnButtonClicked"
+                                        Name="menuBtnAbout">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image Source="/Image/Menu/btn_about.png"/>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                            </Grid>
+                        </Grid>
                     </Grid>
 
-                    <Grid ShowGridLines="False" Grid.Column="1" Grid.Row="1">
+                    <Grid Style="{StaticResource gridShow}" Grid.Column="1" Grid.Row="1">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
                             <RowDefinition/>
@@ -152,21 +256,56 @@
                         </Grid.RowDefinitions>
 
                         <local:MenuElement x:Name="menuSelect" Grid.Row="0"
-                           Template="{StaticResource menuElementTemplate}"/>
+                           Template="{StaticResource menuElementTemplate}"
+                                           Style="{StaticResource menuElementStyle}"/>
                         <local:MenuElement x:Name="menuLearnEating" Grid.Row="1"
-                           Template="{StaticResource menuElementTemplate}"/>
+                           Template="{StaticResource menuElementTemplate}"
+                                           Style="{StaticResource menuElementStyle}"/>
                         <local:MenuElement x:Name="menuLearnTimes"  Grid.Row="2"
-                           Template="{StaticResource menuElementTemplate}"/>
+                           Template="{StaticResource menuElementTemplate}"
+                                           Style="{StaticResource menuElementStyle}"/>
                         <local:MenuElement x:Name="menuGameEating" Grid.Row="3"
-                           Template="{StaticResource menuElementTemplate}"/>
+                           Template="{StaticResource menuElementTemplate}"
+                                           Style="{StaticResource menuElementStyle}"/>
                         <local:MenuElement x:Name="menuGameExcluding" Grid.Row="4"
-                           Template="{StaticResource menuElementTemplate}"/>
+                           Template="{StaticResource menuElementTemplate}"
+                                           Style="{StaticResource menuElementStyle}"/>
                         <local:MenuElement x:Name="menuGameCmp" Grid.Row="5"
-                           Template="{StaticResource menuElementTemplate}"/>
+                           Template="{StaticResource menuElementTemplate}"
+                                           Style="{StaticResource menuElementStyle}"/>
+                    </Grid>
+
+                    <Grid Style="{StaticResource gridShow}"
+                          Grid.Column="1"
+                          Grid.Row="2">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="4*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Button Name="menuBtnStart"
+                                Grid.Column="1"
+                                Grid.Row="1"
+                                Cursor="Hand"
+                                Click="OnButtonClicked">
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Image Source="/Image/Menu/start.png"/>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
                     </Grid>
                 </Grid>
 
-                <Grid Grid.Column="1" ShowGridLines="False">
+                <Grid Grid.Column="1" Style="{StaticResource gridShow}">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="8*"/>

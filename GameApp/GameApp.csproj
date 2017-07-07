@@ -66,13 +66,15 @@
     <Compile Include="Menu\GameModeController.cs" />
     <Compile Include="Menu\MainMenu.cs" />
     <Compile Include="Menu\Menu.cs" />
-    <Compile Include="Menu\MenuButton.cs" />
+    <None Include="Menu\MenuButton.cs" />
     <Compile Include="Menu\MenuElement.cs" />
     <Compile Include="Menu\MenuExpandButton.cs" />
+    <Compile Include="Menu\MenuSoundButton.cs" />
     <Compile Include="Screensaver.xaml.cs">
       <DependentUpon>Screensaver.xaml</DependentUpon>
     </Compile>
     <Compile Include="Test_1.xaml.cs" />
+    <Compile Include="Test_2.xaml.cs" />
     <Compile Include="Training.xaml.cs" />
     <Page Include="Choosing.xaml">
       <SubType>Designer</SubType>
@@ -103,6 +105,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Test_1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Test_2.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -560,6 +566,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\test\_1\wolf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Menu\btn_about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Menu\sound_btn_checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Menu\sound_btn_unchecked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\test\_2\superfluous.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

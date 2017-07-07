@@ -7,7 +7,7 @@ using System.Windows.Media;
 
 namespace GameApp
 {
-    class MenuElement : Label
+    class MenuElement : Button
     {
         public enum MenuElementType
         {
@@ -51,19 +51,29 @@ namespace GameApp
             "ПОМОГИ НАЙТИ"
         };
 
-        private MenuButton m_Button;
+        //private MenuButton m_Button;
         private Menu       m_Parent;
         private bool       m_bChecked;
         private MenuElementType m_eType;
-        private Image m_Img;
+        private Image m_Img, m_CheckImage;
         private Label m_Text;
         private TextBlock m_TB;
-        private Path m_Path;
+        private Rectangle m_Rect;
         private bool m_bHover, m_bSelected;
+
+        private static ImageSource m_Checked = null;
+        private static ImageSource m_Unchecked = null;
 
         public MenuElement()
         {
             m_bHover = m_bSelected = false;
+            m_bChecked = true;
+
+            if (m_Checked == null)
+                m_Checked = ResourceController.GetResourceBitmap("/Image/Menu/checked.png");
+
+            if (m_Unchecked == null)
+                m_Unchecked = ResourceController.GetResourceBitmap("/Image/Menu/unchecked.png");
 
             this.SizeChanged += OnSizeChanged;
         }
@@ -72,19 +82,29 @@ namespace GameApp
         {
             base.OnApplyTemplate();
 
-            m_Button = (MenuButton)GetTemplateChild("menuElementButton");
+            //m_Button = (MenuButton)GetTemplateChild("menuElementButton");
             m_Img = (Image)GetTemplateChild("menuElementImage");
             m_Text = (Label)GetTemplateChild("menuElementLabel");
             m_TB = (TextBlock)GetTemplateChild("menuElementText");
-            m_Path = (Path)GetTemplateChild("menuElementBackground");
+            m_Rect = (Rectangle)GetTemplateChild("menuElementBackground");
+            m_CheckImage = (Image)GetTemplateChild("menuElementCheckImage");
 
-            m_Button.LinkParent(this);
+            //m_Button.LinkParent(this);
+            UpdateCheckImage();
         }
 
-        public void OnClick(bool bChecked)
+        /*public void OnClick(bool bChecked)
         {
             m_bChecked = bChecked;
             //MessageBox.Show(this.Name);
+        }*/
+
+        protected override void OnClick()
+        {
+            base.OnClick();
+
+            m_bChecked = !m_bChecked;
+            UpdateCheckImage();
         }
 
         public void LinkParent(Menu parent, MenuElementType eType)
@@ -132,18 +152,21 @@ namespace GameApp
 
         private void OnSizeChanged(object sender, SizeChangedEventArgs args)
         {
+            m_Rect.Width = ActualWidth;
+            m_Rect.Height = ActualHeight;
+            m_Rect.RadiusX = m_Rect.RadiusY = System.Math.Min(ActualWidth, ActualHeight) * 0.15;
+
             if (m_bSelected || m_bHover)
             {
-                m_Path.StrokeThickness = System.Math.Min(ActualWidth, ActualHeight) * 0.05;
+                m_Rect.StrokeThickness = System.Math.Min(ActualWidth, ActualHeight) * 0.05;
 
                 if (m_bSelected)
-                    m_Path.Stroke = new SolidColorBrush(Color.FromRgb(200, 200, 0));
+                    m_Rect.Stroke = new SolidColorBrush(Color.FromRgb(200, 200, 0));
                 else
-                    m_Path.Stroke = new SolidColorBrush(Color.FromRgb(128, 0, 0));
-
+                    m_Rect.Stroke = new SolidColorBrush(Color.FromRgb(/*87, 135, 70*/ 128, 0, 0));
             }
             else
-                m_Path.StrokeThickness = 0.0;
+                m_Rect.StrokeThickness = 0.0;
 
             m_Text.FontSize = ActualHeight * 0.2;
         }
@@ -151,6 +174,11 @@ namespace GameApp
         private void UpdateElement()
         {
             OnSizeChanged(this, null);
+        }
+
+        private void UpdateCheckImage()
+        {
+            m_CheckImage.Source = (m_bChecked) ? m_Checked : m_Unchecked;
         }
     }
 }

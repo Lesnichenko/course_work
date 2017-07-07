@@ -42,6 +42,7 @@ namespace GameApp
             B_1.Opacity = 0;
             B_2.Opacity = 100;
             B_3.Opacity = 100;
+            canvas.Opacity = 100;
             training_1.Opacity = 100;
             training_2.Opacity = 0;
             training_3.Opacity = 0;
@@ -53,7 +54,7 @@ namespace GameApp
         {
             Random rg = new Random();
 
-            if (Choosing.Num_Animal == 0)
+            if (!MainWindow.last.menuSelect.IsChecked())
             {
                 Choosing.Num_Animal = rg.Next() % 8 + 1;
             }
@@ -277,6 +278,7 @@ namespace GameApp
             canvas.Opacity = 100;
             training_2.Opacity = 0;
             training_3.Opacity = 0;
+            Animation_Animal.Begin(this);
         }
 
         private void B_2_MouseDown(object sender, MouseButtonEventArgs e)
@@ -288,6 +290,7 @@ namespace GameApp
             canvas.Opacity = 0;
             training_2.Opacity = 100;
             training_3.Opacity = 0;
+            Animation_Animal.Stop(this);
         }
 
         private void B_3_MouseDown(object sender, MouseButtonEventArgs e)
@@ -299,6 +302,7 @@ namespace GameApp
             canvas.Opacity = 0;
             training_2.Opacity = 0;
             training_3.Opacity = 100;
+            Animation_Animal.Stop(this);
         }
 
         private void next_button_MouseDown(object sender, MouseButtonEventArgs e)

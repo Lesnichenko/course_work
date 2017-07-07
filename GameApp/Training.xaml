@@ -256,37 +256,37 @@
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.087">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/lynx/1.png" />
+                        <BitmapImage UriSource="Image/gait/lynx/2.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.174">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/lynx/1.png" />
+                        <BitmapImage UriSource="Image/gait/lynx/3.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.261">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/lynx/1.png" />
+                        <BitmapImage UriSource="Image/gait/lynx/4.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.348">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/lynx/1.png" />
+                        <BitmapImage UriSource="Image/gait/lynx/5.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.435">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/lynx/1.png" />
+                        <BitmapImage UriSource="Image/gait/lynx/6.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.522">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/lynx/1.png" />
+                        <BitmapImage UriSource="Image/gait/lynx/7.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.609">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/lynx/1.png" />
+                        <BitmapImage UriSource="Image/gait/lynx/8.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
@@ -556,7 +556,7 @@
                 <Image x:Name="img_1" Source="Image/training/1/fox.png" Margin="39,29.25"/>
             </Grid>
             <Grid x:Name="canvas" HorizontalAlignment="Left" Height="549.258" VerticalAlignment="Top" Width="498.341" Margin="495.968,145.709,0,0" d:IsHidden="True">
-                <Image x:Name="image2"  Margin="10.949,52.814,5.538,66.453"/>
+                <Image x:Name="image2"  Margin="10.949,87.314,5.538,172.953"/>
             </Grid>
             <Grid x:Name="training_3" Opacity="0" >
                 <Image x:Name="img_3" Source="Image/training/1/hare.png" Margin="39,29.25"/>

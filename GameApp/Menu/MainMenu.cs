@@ -22,5 +22,10 @@ namespace GameApp
             else
                 m_gmCtl.ExitGame();
         }
+
+        public void OnAboutButtonClicked(object sender, RoutedEventArgs args)
+        {
+            MainWindow.last.ShowAbout();
+        }
     }
 }
