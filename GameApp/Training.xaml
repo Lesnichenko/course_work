@@ -350,27 +350,27 @@
                                Storyboard.TargetProperty="(Image.Source)" RepeatBehavior="Forever">
                 <DiscreteObjectKeyFrame KeyTime="0">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/hedgehog/1.png" />
+                        <BitmapImage UriSource="Image/gait/hedgehog/11.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.087">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/hedgehog/2.png" />
+                        <BitmapImage UriSource="Image/gait/hedgehog/10.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.174">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/hedgehog/3.png" />
+                        <BitmapImage UriSource="Image/gait/hedgehog/9.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.261">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/hedgehog/4.png" />
+                        <BitmapImage UriSource="Image/gait/hedgehog/8.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.348">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/hedgehog/5.png" />
+                        <BitmapImage UriSource="Image/gait/hedgehog/7.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.435">
@@ -380,27 +380,27 @@
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.522">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/hedgehog/7.png" />
+                        <BitmapImage UriSource="Image/gait/hedgehog/5.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.609">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/hedgehog/8.png" />
+                        <BitmapImage UriSource="Image/gait/hedgehog/4.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.696">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/hedgehog/9.png" />
+                        <BitmapImage UriSource="Image/gait/hedgehog/3.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.783">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/hedgehog/10.png" />
+                        <BitmapImage UriSource="Image/gait/hedgehog/2.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.87">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/hedgehog/11.png" />
+                        <BitmapImage UriSource="Image/gait/hedgehog/1.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
@@ -552,16 +552,16 @@
     <Viewbox Stretch="Fill">
 
         <Grid Height="864" Width="1152">
-            <Grid x:Name="training_1" d:IsHidden="True" >
+            <Grid x:Name="training_1" >
                 <Image x:Name="img_1" Source="Image/training/1/fox.png" Margin="39,29.25"/>
             </Grid>
-            <Grid x:Name="canvas" HorizontalAlignment="Left" Height="549.258" VerticalAlignment="Top" Width="498.341" Margin="495.968,145.709,0,0" d:IsHidden="True">
-                <Image x:Name="image2"  Margin="10.949,87.314,5.538,172.953"/>
+            <Grid x:Name="canvas" HorizontalAlignment="Left" Height="549.258" VerticalAlignment="Top" Width="498.341" Margin="495.968,145.709,0,0">
+                <Image x:Name="image2"  Margin="10.949,154.64,5.538,169.213"/>
             </Grid>
-            <Grid x:Name="training_3" Opacity="0" >
+            <Grid x:Name="training_3" Opacity="0" d:IsHidden="True" >
                 <Image x:Name="img_3" Source="Image/training/1/hare.png" Margin="39,29.25"/>
             </Grid>
-            <Grid x:Name="training_2" >
+            <Grid x:Name="training_2" d:IsHidden="True" >
                 <Image x:Name="img_2" Source="Image/training/2/fox.png" Margin="39,29.25"/>
                 <Image x:Name="food_1" HorizontalAlignment="Left" Height="179.965" Margin="69.856,62.25,0,0" VerticalAlignment="Top" Width="179.176"/>
                 <Image x:Name="food_2" HorizontalAlignment="Left" Margin="74.842,311.215,0,378.82" Width="173.204"/>
@@ -569,17 +569,17 @@
                 <Image x:Name="Ellips_3" Height="243.215" Width="239.888" Source="Image/обводка.png" HorizontalAlignment="Left" Margin="39,0,0,97.355" VerticalAlignment="Bottom" Opacity="0"/>
                 <Image x:Name="Ellips_2" Width="239.888" Source="Image/обводка.png" HorizontalAlignment="Left" Margin="39,280.215,0,340.57" Opacity="0"/>
                 <Image x:Name="Ellips_1" Height="248.965" Width="239.888" Source="Image/обводка.png" HorizontalAlignment="Left" Margin="39,29.25,0,0" VerticalAlignment="Top" Opacity="0"/>
-                   </Grid>
-            <Grid Height="42.75" Margin="547,0,468,51.25" VerticalAlignment="Bottom">
+            </Grid>
+            <Grid Margin="510.016,796.25,503.682,22.948" HorizontalAlignment="Center" Width="138.302">
                 <Image x:Name="B_1" Width="42" Source="Image/interface/зн черный.png" Panel.ZIndex="3" MouseDown="B_1_MouseDown" HorizontalAlignment="Left"/>
-                <Image x:Name="B_2" Source="Image/interface/зн черный.png" Panel.ZIndex="3" MouseDown="B_2_MouseDown" Margin="47,0,48,0"/>
+                <Image x:Name="B_2" Width="42" Source="Image/interface/зн черный.png" Panel.ZIndex="3" MouseDown="B_2_MouseDown" Margin="47,0,48,0"/>
                 <Image x:Name="B_3" Width="42" Source="Image/interface/зн черный.png" Panel.ZIndex="3" MouseDown="B_3_MouseDown" HorizontalAlignment="Right" Margin="0,0,1,0"/>
                 <Image x:Name="W_1" Width="42" Source="Image/interface/зн белый.png" Panel.ZIndex="2" HorizontalAlignment="Left"/>
-                <Image x:Name="W_2" Source="Image/interface/зн белый.png"  Panel.ZIndex="2" Margin="47,0,48,0"/>
+                <Image x:Name="W_2" Width="42" Source="Image/interface/зн белый.png"  Panel.ZIndex="2" Margin="47,0,48,0"/>
                 <Image x:Name="W_3" Width="42" Source="Image/interface/зн белый.png" Panel.ZIndex="2" HorizontalAlignment="Right" Margin="0,0,1,0"/>
-               </Grid>
+            </Grid>
             <Image x:Name="back_button" Height="89.071" Width="174" Source="Image/interface/назад.png" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom"/>
-            <Image x:Name="next_button" Height="89.071" Width="174" Source="Image/interface/вперёд.png" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" MouseDown="next_button_MouseDown"/>
+            <Image x:Name="next_button" Height="89.071" Width="174" Source="Image/interface/вперёд.png" HorizontalAlignment="Right" Margin="0,0,10,11.5" VerticalAlignment="Bottom" MouseDown="next_button_MouseDown"/>
 
         </Grid>
     </Viewbox>

@@ -9,7 +9,7 @@
       Title="Test_1">
     <Page.Resources>
         <Storyboard x:Key="Yes">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Ellips_1" Completed="OnAnimationComplete">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Ellips_1">
                 <SplineDoubleKeyFrame KeyTime="0" Value="0"/>
                 <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="0.75"/>
                 <SplineDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
@@ -97,6 +97,8 @@
             <Image x:Name="Ellips_2" Width="239.888" Source="Image/обводка.png" HorizontalAlignment="Left" Margin="39,280.215,0,345.57" MouseDown="Ellips_2_MouseDown" Opacity="0"/>
             <Image x:Name="Ellips_1" Height="232.965" Width="239.888" Source="Image/обводка.png" HorizontalAlignment="Left" Margin="43,29.25,0,0" VerticalAlignment="Top" Opacity="0" MouseDown="Ellips_1_MouseDown"/>
             <Image x:Name="ani" Margin="381,29.25,39,97.355"/>
+            <Image x:Name="next_button" Height="89.071" Width="174" Source="Image/interface/вперёд.png" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" MouseDown="next_button_MouseDown" Opacity="0"/>
+            <Button x:Name="Rest" Content="Ещё" HorizontalAlignment="Left" Height="63.105" Margin="452.093,790.895,0,0" VerticalAlignment="Top" Width="236.093" FontSize="48" FontFamily="Segoe UI Black" Background="#FFF9FAFB" Foreground="#FF8D4B1E" BorderBrush="#FF8D4B1E" Click="Rest_Click"/>
         </Grid>
 
     </Viewbox>

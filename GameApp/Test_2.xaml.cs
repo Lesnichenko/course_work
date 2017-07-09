@@ -24,17 +24,17 @@ namespace GameApp
             m_gmCtl = gmCtl;
 
             InitializeComponent();
-            Navigation();
+            Creating_test(Number_Animal_Test);
         }
 
-        private Storyboard Animation_Food_1;
-        private Storyboard Animation_Food_2;
-        private Storyboard Animation_Food_3;
+        private Storyboard Animation_Food;
         private Storyboard Choise_1;
         private Storyboard Choise_2;
         private Storyboard Choise_3;
-        private bool abc_1 = false;
-        private bool abc_2 = false;
+        private int num_true;
+        private int Number_Animal_Test;
+        private Random rgb = new Random();
+        private bool excess_1, excess_2, excess_3;
 
         public void StartGame()
         {
@@ -44,184 +44,28 @@ namespace GameApp
             {
                 Choosing.Num_Animal = rg.Next() % 8 + 1;
             }
-
-            Navigation();
+            excess_1 = false;
+            excess_2 = false;
+            excess_3 = false;
+            Number_Animal_Test = Choosing.Num_Animal;
+            Creating_test(Number_Animal_Test);
+            Resume();
         }
 
-        private void Navigation()
-        {
-            int i = Choosing.Num_Animal;
-            abc_1 = false;
-            abc_2 = false;
-            BitmapImage page_2 = new BitmapImage();
-            BitmapImage food_img_1 = new BitmapImage();
-            BitmapImage food_img_2 = new BitmapImage();
-            BitmapImage food_img_3 = new BitmapImage();
-            switch (i)
-            {
-                case (1):
-                    {
-                        page_2.BeginInit();
-                        page_2.UriSource = new Uri("/Image/test/_2/superfluous.png", UriKind.Relative);
-                        page_2.EndInit();
-                        food_img_1.BeginInit();
-                        food_img_1.UriSource = new Uri("/Image/food/жук.png", UriKind.Relative);
-                        food_img_1.EndInit();
-                        food_img_2.BeginInit();
-                        food_img_2.UriSource = new Uri("/Image/food/rastenia.png", UriKind.Relative);
-                        food_img_2.EndInit();
-                        food_img_3.BeginInit();
-                        food_img_3.UriSource = new Uri("/Image/food/ryba.png", UriKind.Relative);
-                        food_img_3.EndInit();
-                        Animation_Food_1 = (Storyboard)FindResource("Yes");
-                        Animation_Food_2 = (Storyboard)FindResource("Yes");
-                        Animation_Food_3 = (Storyboard)FindResource("Yes");
-                        break;
-                    }
-                case (2):
-                    {
-                        page_2.BeginInit();
-                        page_2.UriSource = new Uri("/Image/test/_2/superfluous.png", UriKind.Relative);
-                        page_2.EndInit();
-                        food_img_1.BeginInit();
-                        food_img_1.UriSource = new Uri("/Image/food/ягоды.png", UriKind.Relative);
-                        food_img_1.EndInit();
-                        food_img_2.BeginInit();
-                        food_img_2.UriSource = new Uri("/Image/food/жук.png", UriKind.Relative);
-                        food_img_2.EndInit();
-                        food_img_3.BeginInit();
-                        food_img_3.UriSource = new Uri("/Image/food/грызун.png", UriKind.Relative);
-                        food_img_3.EndInit();
-                        Animation_Food_1 = (Storyboard)FindResource("Yes");
-                        Animation_Food_2 = (Storyboard)FindResource("Yes");
-                        Animation_Food_3 = (Storyboard)FindResource("Yes");
-                        break;
-                    }
-                case (3):
-                    {
-                        page_2.BeginInit();
-                        page_2.UriSource = new Uri("/Image/test/_2/superfluous.png", UriKind.Relative);
-                        page_2.EndInit();
-                        food_img_1.BeginInit();
-                        food_img_1.UriSource = new Uri("/Image/food/жук.png", UriKind.Relative);
-                        food_img_1.EndInit();
-                        food_img_2.BeginInit();
-                        food_img_2.UriSource = new Uri("/Image/food/грызун.png", UriKind.Relative);
-                        food_img_2.EndInit();
-                        food_img_3.BeginInit();
-                        food_img_3.UriSource = new Uri("/Image/food/ягоды.png", UriKind.Relative);
-                        food_img_3.EndInit();
-                        Animation_Food_1 = (Storyboard)FindResource("Yes");
-                        Animation_Food_2 = (Storyboard)FindResource("Yes");
-                        Animation_Food_3 = (Storyboard)FindResource("Yes");
-                        break;
-                    }
-                case (4):
-                    {
-                        page_2.BeginInit();
-                        page_2.UriSource = new Uri("/Image/test/_2/superfluous.png", UriKind.Relative);
-                        page_2.EndInit();
-                        food_img_1.BeginInit();
-                        food_img_1.UriSource = new Uri("/Image/food/жук.png", UriKind.Relative);
-                        food_img_1.EndInit();
-                        food_img_2.BeginInit();
-                        food_img_2.UriSource = new Uri("/Image/food/грызун.png", UriKind.Relative);
-                        food_img_2.EndInit();
-                        food_img_3.BeginInit();
-                        food_img_3.UriSource = new Uri("/Image/food/ягоды.png", UriKind.Relative);
-                        food_img_3.EndInit();
-                        Animation_Food_1 = (Storyboard)FindResource("Yes");
-                        Animation_Food_2 = (Storyboard)FindResource("Yes");
-                        Animation_Food_3 = (Storyboard)FindResource("Yes");
-                        break;
-                    }
-                case (5):
-                    {
-                        page_2.BeginInit();
-                        page_2.UriSource = new Uri("/Image/test/_2/superfluous.png", UriKind.Relative);
-                        page_2.EndInit();
-                        food_img_1.BeginInit();
-                        food_img_1.UriSource = new Uri("/Image/food/morkov.png", UriKind.Relative);
-                        food_img_1.EndInit();
-                        food_img_2.BeginInit();
-                        food_img_2.UriSource = new Uri("/Image/food/ягоды.png", UriKind.Relative);
-                        food_img_2.EndInit();
-                        food_img_3.BeginInit();
-                        food_img_3.UriSource = new Uri("/Image/food/грызун.png", UriKind.Relative);
-                        food_img_3.EndInit();
-                        Animation_Food_1 = (Storyboard)FindResource("Yes");
-                        Animation_Food_2 = (Storyboard)FindResource("Yes");
-                        Animation_Food_3 = (Storyboard)FindResource("Yes");
-                        break;
-                    }
-                case (6):
-                    {
-                        page_2.BeginInit();
-                        page_2.UriSource = new Uri("/Image/test/_2/superfluous.png", UriKind.Relative);
-                        page_2.EndInit();
-                        food_img_1.BeginInit();
-                        food_img_1.UriSource = new Uri("/Image/food/жук.png", UriKind.Relative);
-                        food_img_1.EndInit();
-                        food_img_2.BeginInit();
-                        food_img_2.UriSource = new Uri("/Image/food/ягоды.png", UriKind.Relative);
-                        food_img_2.EndInit();
-                        food_img_3.BeginInit();
-                        food_img_3.UriSource = new Uri("/Image/food/грызун.png", UriKind.Relative);
-                        food_img_3.EndInit();
-                        Animation_Food_1 = (Storyboard)FindResource("Yes");
-                        Animation_Food_2 = (Storyboard)FindResource("Yes");
-                        Animation_Food_3 = (Storyboard)FindResource("Yes");
-                        break;
-                    }
-                case (7):
-                    {
-                        page_2.BeginInit();
-                        page_2.UriSource = new Uri("/Image/test/_2/superfluous.png", UriKind.Relative);
-                        page_2.EndInit();
-                        food_img_1.BeginInit();
-                        food_img_1.UriSource = new Uri("/Image/food/орехи.png", UriKind.Relative);
-                        food_img_1.EndInit();
-                        food_img_2.BeginInit();
-                        food_img_2.UriSource = new Uri("/Image/food/грызун.png", UriKind.Relative);
-                        food_img_2.EndInit();
-                        food_img_3.BeginInit();
-                        food_img_3.UriSource = new Uri("/Image/food/ягоды.png", UriKind.Relative);
-                        food_img_3.EndInit();
-                        Animation_Food_1 = (Storyboard)FindResource("Yes");
-                        Animation_Food_2 = (Storyboard)FindResource("Yes");
-                        Animation_Food_3 = (Storyboard)FindResource("Yes");
-                        break;
-                    }
-                case (8):
-                    {
-                        page_2.BeginInit();
-                        page_2.UriSource = new Uri("/Image/test/_2/superfluous.png", UriKind.Relative);
-                        page_2.EndInit();
-                        food_img_1.BeginInit();
-                        food_img_1.UriSource = new Uri("/Image/food/seno.png", UriKind.Relative);
-                        food_img_1.EndInit();
-                        food_img_2.BeginInit();
-                        food_img_2.UriSource = new Uri("/Image/food/грызун.png", UriKind.Relative);
-                        food_img_2.EndInit();
-                        food_img_3.BeginInit();
-                        food_img_3.UriSource = new Uri("/Image/food/ягоды.png", UriKind.Relative);
-                        food_img_3.EndInit();
-                        Animation_Food_1 = (Storyboard)FindResource("Yes");
-                        Animation_Food_2 = (Storyboard)FindResource("Yes");
-                        Animation_Food_3 = (Storyboard)FindResource("Yes");
-                        break;
-                    }
-            }
-            img_2.Source = page_2;
-            food_1.Source = food_img_1;
-            food_2.Source = food_img_2;
-            food_3.Source = food_img_3;
-        }
         private void Ellips_1_MouseDown(object sender, MouseButtonEventArgs e)
         {
             BitmapImage Choise = new BitmapImage();
             Choise.BeginInit();
-            Choise.UriSource = new Uri("/Image/test/неправильный ответ.png", UriKind.Relative);
+            if (num_true == 1)
+            {
+                Choise.UriSource = new Uri("/Image/test/неправильный ответ.png", UriKind.Relative);
+            }
+            else
+            {
+                if (excess_2 || excess_3) next_button.Opacity = 100;
+                else excess_1 = true;
+                Choise.UriSource = new Uri("/Image/test/правильный ответ.png", UriKind.Relative);
+            }
             Choise.EndInit();
             Ellips_1.Source = Choise;
             Choise_1 = (Storyboard)FindResource("Yes");
@@ -232,36 +76,48 @@ namespace GameApp
         {
             BitmapImage Choise = new BitmapImage();
             Choise.BeginInit();
-            Choise.UriSource = new Uri("/Image/test/правильный ответ.png", UriKind.Relative);
+            if (num_true == 2)
+            {
+                Choise.UriSource = new Uri("/Image/test/неправильный ответ.png", UriKind.Relative);
+            }
+            else
+            {
+                if (excess_1 || excess_3) next_button.Opacity = 100;
+                else excess_2 = true;
+                Choise.UriSource = new Uri("/Image/test/правильный ответ.png", UriKind.Relative);
+            }
             Choise.EndInit();
             Ellips_2.Source = Choise;
             Choise_2 = (Storyboard)FindResource("No_1");
             Choise_2.Begin(this);
-            if (abc_2)
-            {
-                Resume();
-                m_gmCtl.NextGame();
-            }
-            else abc_1 = true;
         }
 
         private void Ellips_3_MouseDown(object sender, MouseButtonEventArgs e)
         {
             BitmapImage Choise = new BitmapImage();
             Choise.BeginInit();
-            Choise.UriSource = new Uri("/Image/test/правильный ответ.png", UriKind.Relative);
+            if (num_true == 3)
+            {
+                Choise.UriSource = new Uri("/Image/test/неправильный ответ.png", UriKind.Relative);
+            }
+            else
+            {
+                if (excess_1 || excess_2) next_button.Opacity = 100;
+                else excess_3 = true;
+                Choise.UriSource = new Uri("/Image/test/правильный ответ.png", UriKind.Relative);
+            }
             Choise.EndInit();
             Ellips_3.Source = Choise;
             Choise_3 = (Storyboard)FindResource("No_2");
             Choise_3.Begin(this);
-            if (abc_1)
-            {
-                Resume();
-                m_gmCtl.NextGame();
-            }
-            else abc_2 = true;
         }
-
+        /*
+        private void OnAnimationComplete(object sender, EventArgs args)
+        {
+            Resume();
+            m_gmCtl.NextGame();
+        }
+        */
         private void Resume()
         {
             BitmapImage Choise = new BitmapImage();
@@ -271,6 +127,684 @@ namespace GameApp
             Ellips_1.Source = Choise;
             Ellips_2.Source = Choise;
             Ellips_3.Source = Choise;
+            next_button.Opacity = 0;
+        }
+
+        private void Creating_test(int Number)
+        {
+            Random rg = new Random();
+            BitmapImage page_2 = new BitmapImage();
+            BitmapImage food_img_1 = new BitmapImage();
+            BitmapImage food_img_2 = new BitmapImage();
+            BitmapImage food_img_3 = new BitmapImage();
+            switch (Number)
+            {
+                case (1):
+                    {
+                        page_2.BeginInit();
+                        page_2.UriSource = new Uri("/Image/test/_2/superfluous.png", UriKind.Relative);
+                        page_2.EndInit();
+                        num_true = rg.Next() % 3 + 1;
+                        Answer_Options(num_true, Number);
+                        break;
+                    }
+                case (2):
+                    {
+                        page_2.BeginInit();
+                        page_2.UriSource = new Uri("/Image/test/_2/superfluous.png", UriKind.Relative);
+                        page_2.EndInit();
+                        num_true = rg.Next() % 3 + 1;
+                        Answer_Options(num_true, Number);
+                        break;
+                    }
+                case (3):
+                    {
+                        page_2.BeginInit();
+                        page_2.UriSource = new Uri("/Image/test/_2/superfluous.png", UriKind.Relative);
+                        page_2.EndInit();
+                        num_true = rg.Next() % 3 + 1;
+                        Answer_Options(num_true, Number);
+                        break;
+                    }
+                case (4):
+                    {
+                        page_2.BeginInit();
+                        page_2.UriSource = new Uri("/Image/test/_2/superfluous.png", UriKind.Relative);
+                        page_2.EndInit();
+                        num_true = rg.Next() % 3 + 1;
+                        Answer_Options(num_true, Number);
+                        break;
+                    }
+                case (5):
+                    {
+                        page_2.BeginInit();
+                        page_2.UriSource = new Uri("/Image/test/_2/superfluous.png", UriKind.Relative);
+                        page_2.EndInit();
+                        num_true = rg.Next() % 3 + 1;
+                        Answer_Options(num_true, Number);
+                        break;
+                    }
+                case (6):
+                    {
+                        page_2.BeginInit();
+                        page_2.UriSource = new Uri("/Image/test/_2/superfluous.png", UriKind.Relative);
+                        page_2.EndInit();
+                        num_true = rg.Next() % 3 + 1;
+                        Answer_Options(num_true, Number);
+                        break;
+                    }
+                case (7):
+                    {
+                        page_2.BeginInit();
+                        page_2.UriSource = new Uri("/Image/test/_2/superfluous.png", UriKind.Relative);
+                        page_2.EndInit();
+                        num_true = rg.Next() % 3 + 1;
+                        Answer_Options(num_true, Number);
+                        break;
+                    }
+                case (8):
+                    {
+                        page_2.BeginInit();
+                        page_2.UriSource = new Uri("/Image/test/_2/superfluous.png", UriKind.Relative);
+                        page_2.EndInit();
+                        num_true = rg.Next() % 3 + 1;
+                        Answer_Options(num_true, Number);
+                        break;
+                    }
+            }
+            img_2.Source = page_2;
+        }
+
+        private void Answer_Options(int Number, int Number_Animal)
+        {
+            BitmapImage food_img_1 = new BitmapImage();
+            BitmapImage food_img_2 = new BitmapImage();
+            BitmapImage food_img_3 = new BitmapImage();
+            BitmapImage Choise = new BitmapImage();
+            Random rg = new Random();
+
+            food_img_1.BeginInit();
+            if (Number == 1) food_img_1.UriSource = new Uri(Random_Food(Number_Animal), UriKind.Relative);
+            else
+            {
+                food_img_1.UriSource = new Uri(Random_Food_False(Number_Animal), UriKind.Relative);
+            }
+            food_img_1.EndInit();
+            food_1.Source = food_img_1;
+            food_img_2.BeginInit();
+            if (Number == 2) food_img_2.UriSource = new Uri(Random_Food(Number_Animal), UriKind.Relative);
+            else
+            {
+                food_img_2.UriSource = new Uri(Random_Food_False(Number_Animal), UriKind.Relative);
+            }
+            food_img_2.EndInit();
+            food_2.Source = food_img_2;
+            food_img_3.BeginInit();
+            if (Number == 3) food_img_3.UriSource = new Uri(Random_Food(Number_Animal), UriKind.Relative);
+            else
+            {
+                food_img_3.UriSource = new Uri(Random_Food_False(Number_Animal), UriKind.Relative);
+            }
+            food_img_3.EndInit();
+            food_3.Source = food_img_3;
+        }
+
+        private string Random_Food(int Number)
+        {
+            Random rg = new Random();
+            switch (Number)
+            {
+                case (1):
+                    {
+                        switch (rg.Next() % 3 + 1)
+                        {
+                            case (1):
+                                {
+                                    Animation_Food = (Storyboard)FindResource("Yes");
+                                    return ("/Image/food/жук.png");
+                                }
+                            case (2):
+                                {
+                                    Animation_Food = (Storyboard)FindResource("Yes");
+                                    return ("/Image/food/грызун.png");
+                                }
+                            case (3):
+                                {
+                                    Animation_Food = (Storyboard)FindResource("Yes");
+                                    return ("/Image/food/ягоды.png");
+                                }
+                        }
+                        break;
+                    }
+                case (2):
+                    {
+                        switch (rg.Next() % 3 + 1)
+                        {
+                            case (1):
+                                {
+                                    Animation_Food = (Storyboard)FindResource("Yes");
+                                    return ("/Image/food/ягоды.png");
+                                }
+                            case (2):
+                                {
+                                    Animation_Food = (Storyboard)FindResource("Yes");
+                                    return ("/Image/food/rastenia.png");
+                                }
+                            case (3):
+                                {
+                                    Animation_Food = (Storyboard)FindResource("Yes");
+                                    return ("/Image/food/ryba.png");
+                                }
+                        }
+                        break;
+                    }
+                case (3):
+                    {
+                        switch (rg.Next() % 3 + 1)
+                        {
+                            case (1):
+                                {
+                                    Animation_Food = (Storyboard)FindResource("Yes");
+                                    return ("/Image/food/food_test.png");
+                                }
+                            case (2):
+                                {
+                                    Animation_Food = (Storyboard)FindResource("Yes");
+                                    return ("/Image/food/food_test.png");
+                                }
+                            case (3):
+                                {
+                                    Animation_Food = (Storyboard)FindResource("Yes");
+                                    return ("/Image/food/food_test.png");
+                                }
+                        }
+                        break;
+                    }
+                case (4):
+                    {
+                        switch (rg.Next() % 3 + 1)
+                        {
+                            case (1):
+                                {
+                                    Animation_Food = (Storyboard)FindResource("Yes");
+                                    return ("/Image/food/food_test.png");
+                                }
+                            case (2):
+                                {
+                                    Animation_Food = (Storyboard)FindResource("Yes");
+                                    return ("/Image/food/food_test.png");
+                                }
+                            case (3):
+                                {
+                                    Animation_Food = (Storyboard)FindResource("Yes");
+                                    return ("/Image/food/food_test.png");
+                                }
+                        }
+                        break;
+                    }
+                case (5):
+                    {
+                        switch (rg.Next() % 3 + 1)
+                        {
+                            case (1):
+                                {
+                                    Animation_Food = (Storyboard)FindResource("Yes");
+                                    return ("/Image/food/morkov.png");
+                                }
+                            case (2):
+                                {
+                                    Animation_Food = (Storyboard)FindResource("Yes");
+                                    return ("/Image/food/seno.png");
+                                }
+                            case (3):
+                                {
+                                    Animation_Food = (Storyboard)FindResource("Yes");
+                                    return ("/Image/food/rastenia.png");
+                                }
+                        }
+                        break;
+                    }
+                case (6):
+                    {
+                        switch (rg.Next() % 3 + 1)
+                        {
+                            case (1):
+                                {
+                                    Animation_Food = (Storyboard)FindResource("Yes");
+                                    return ("/Image/food/жук.png");
+                                }
+                            case (2):
+                                {
+                                    Animation_Food = (Storyboard)FindResource("Yes");
+                                    return ("/Image/food/улитку.png");
+                                }
+                            case (3):
+                                {
+                                    Animation_Food = (Storyboard)FindResource("Yes");
+                                    return ("/Image/food/черви.png");
+                                }
+                        }
+                        break;
+                    }
+                case (7):
+                    {
+                        switch (rg.Next() % 3 + 1)
+                        {
+                            case (1):
+                                {
+                                    Animation_Food = (Storyboard)FindResource("Yes");
+                                    return ("/Image/food/food_test.png");
+                                }
+                            case (2):
+                                {
+                                    Animation_Food = (Storyboard)FindResource("Yes");
+                                    return ("/Image/food/food_test.png");
+                                }
+                            case (3):
+                                {
+                                    Animation_Food = (Storyboard)FindResource("Yes");
+                                    return ("/Image/food/food_test.png");
+                                }
+                        }
+                        break;
+                    }
+                case (8):
+                    {
+                        switch (rg.Next() % 3 + 1)
+                        {
+                            case (1):
+                                {
+                                    Animation_Food = (Storyboard)FindResource("Yes");
+                                    return ("/Image/food/food_test.png");
+                                }
+                            case (2):
+                                {
+                                    Animation_Food = (Storyboard)FindResource("Yes");
+                                    return ("/Image/food/food_test.png");
+                                }
+                            case (3):
+                                {
+                                    Animation_Food = (Storyboard)FindResource("Yes");
+                                    return ("/Image/food/food_test.png");
+                                }
+
+                        }
+                        break;
+                    }
+                default:
+                    {
+                        return ("/Image/food/food_test.png");
+                    }
+            }
+            return ("/Image/food/food_test.png");
+        }
+
+        private void Rest_Click(object sender, RoutedEventArgs e)
+        {
+            StartGame();
+        }
+
+        private string Random_Food_False(int Number)
+        {
+            int random_food_num = rgb.Next() % 9 + 1;
+            switch (Number)
+            {
+                case (1):
+                    {
+                        switch (random_food_num)
+                        {
+                            case (1):
+                                {
+                                    return ("/Image/food/food_test.png");
+                                }
+                            case (2):
+                                {
+                                    return ("/Image/food/morkov.png");
+                                }
+                            case (3):
+                                {
+                                    return ("/Image/food/rastenia.png");
+                                }
+                            case (4):
+                                {
+                                    return ("/Image/food/ryba.png");
+                                }
+                            case (5):
+                                {
+                                    return ("/Image/food/seno.png");
+                                }
+                            case (6):
+                                {
+                                    return ("/Image/food/yablochko.png");
+                                }
+                            case (7):
+                                {
+                                    return ("/Image/food/орехи.png");
+                                }
+                            case (8):
+                                {
+                                    return ("/Image/food/улитка.png");
+                                }
+                            case (9):
+                                {
+                                    return ("/Image/food/черви.png");
+                                }
+                        }
+                        break;
+                    }
+                case (2):
+                    {
+                        switch (random_food_num)
+                        {
+                            case (1):
+                                {
+                                    return ("/Image/food/food_test.png");
+                                }
+                            case (2):
+                                {
+                                    return ("/Image/food/morkov.png");
+                                }
+                            case (3):
+                                {
+                                    return ("/Image/food/грызун.png");
+                                }
+                            case (4):
+                                {
+                                    return ("/Image/food/жук.png");
+                                }
+                            case (5):
+                                {
+                                    return ("/Image/food/seno.png");
+                                }
+                            case (6):
+                                {
+                                    return ("/Image/food/yablochko.png");
+                                }
+                            case (7):
+                                {
+                                    return ("/Image/food/орехи.png");
+                                }
+                            case (8):
+                                {
+                                    return ("/Image/food/улитка.png");
+                                }
+                            case (9):
+                                {
+                                    return ("/Image/food/черви.png");
+                                }
+                        }
+                        break;
+                    }
+                case (3):
+                    {
+                        switch (random_food_num)
+                        {
+                            case (1):
+                                {
+                                    return ("/Image/food/food_test.png");
+                                }
+                            case (2):
+                                {
+                                    return ("/Image/food/morkov.png");
+                                }
+                            case (3):
+                                {
+                                    return ("/Image/food/rastenia.png");
+                                }
+                            case (4):
+                                {
+                                    return ("/Image/food/ryba.png");
+                                }
+                            case (5):
+                                {
+                                    return ("/Image/food/seno.png");
+                                }
+                            case (6):
+                                {
+                                    return ("/Image/food/yablochko.png");
+                                }
+                            case (7):
+                                {
+                                    return ("/Image/food/орехи.png");
+                                }
+                            case (8):
+                                {
+                                    return ("/Image/food/улитка.png");
+                                }
+                            case (9):
+                                {
+                                    return ("/Image/food/черви.png");
+                                }
+                        }
+                        break;
+                    }
+                case (4):
+                    {
+                        switch (random_food_num)
+                        {
+                            case (1):
+                                {
+                                    return ("/Image/food/food_test.png");
+                                }
+                            case (2):
+                                {
+                                    return ("/Image/food/morkov.png");
+                                }
+                            case (3):
+                                {
+                                    return ("/Image/food/rastenia.png");
+                                }
+                            case (4):
+                                {
+                                    return ("/Image/food/ryba.png");
+                                }
+                            case (5):
+                                {
+                                    return ("/Image/food/seno.png");
+                                }
+                            case (6):
+                                {
+                                    return ("/Image/food/yablochko.png");
+                                }
+                            case (7):
+                                {
+                                    return ("/Image/food/орехи.png");
+                                }
+                            case (8):
+                                {
+                                    return ("/Image/food/улитка.png");
+                                }
+                            case (9):
+                                {
+                                    return ("/Image/food/черви.png");
+                                }
+                        }
+                        break;
+                    }
+                case (5):
+                    {
+                        switch (random_food_num)
+                        {
+                            case (1):
+                                {
+                                    return ("/Image/food/food_test.png");
+                                }
+                            case (2):
+                                {
+                                    return ("/Image/food/ryba.png");
+                                }
+                            case (3):
+                                {
+                                    return ("/Image/food/жук.png");
+                                }
+                            case (4):
+                                {
+                                    return ("/Image/food/ryba.png");
+                                }
+                            case (5):
+                                {
+                                    return ("/Image/food/ягоды.png");
+                                }
+                            case (6):
+                                {
+                                    return ("/Image/food/yablochko.png");
+                                }
+                            case (7):
+                                {
+                                    return ("/Image/food/орехи.png");
+                                }
+                            case (8):
+                                {
+                                    return ("/Image/food/улитка.png");
+                                }
+                            case (9):
+                                {
+                                    return ("/Image/food/черви.png");
+                                }
+                        }
+                        break;
+                    }
+                case (6):
+                    {
+                        switch (random_food_num)
+                        {
+                            case (1):
+                                {
+                                    return ("/Image/food/food_test.png");
+                                }
+                            case (2):
+                                {
+                                    return ("/Image/food/morkov.png");
+                                }
+                            case (3):
+                                {
+                                    return ("/Image/food/rastenia.png");
+                                }
+                            case (4):
+                                {
+                                    return ("/Image/food/ryba.png");
+                                }
+                            case (5):
+                                {
+                                    return ("/Image/food/seno.png");
+                                }
+                            case (6):
+                                {
+                                    return ("/Image/food/yablochko.png");
+                                }
+                            case (7):
+                                {
+                                    return ("/Image/food/орехи.png");
+                                }
+                            case (8):
+                                {
+                                    return ("/Image/food/жук.png");
+                                }
+                            case (9):
+                                {
+                                    return ("/Image/food/грызун.png");
+                                }
+                        }
+                        break;
+                    }
+                case (7):
+                    {
+                        switch (random_food_num)
+                        {
+                            case (1):
+                                {
+                                    return ("/Image/food/food_test.png");
+                                }
+                            case (2):
+                                {
+                                    return ("/Image/food/morkov.png");
+                                }
+                            case (3):
+                                {
+                                    return ("/Image/food/rastenia.png");
+                                }
+                            case (4):
+                                {
+                                    return ("/Image/food/ryba.png");
+                                }
+                            case (5):
+                                {
+                                    return ("/Image/food/seno.png");
+                                }
+                            case (6):
+                                {
+                                    return ("/Image/food/yablochko.png");
+                                }
+                            case (7):
+                                {
+                                    return ("/Image/food/жук.png");
+                                }
+                            case (8):
+                                {
+                                    return ("/Image/food/улитка.png");
+                                }
+                            case (9):
+                                {
+                                    return ("/Image/food/черви.png");
+                                }
+                        }
+                        break;
+                    }
+                case (8):
+                    {
+                        switch (random_food_num)
+                        {
+                            case (1):
+                                {
+                                    return ("/Image/food/food_test.png");
+                                }
+                            case (2):
+                                {
+                                    return ("/Image/food/morkov.png");
+                                }
+                            case (3):
+                                {
+                                    return ("/Image/food/rastenia.png");
+                                }
+                            case (4):
+                                {
+                                    return ("/Image/food/ryba.png");
+                                }
+                            case (5):
+                                {
+                                    return ("/Image/food/seno.png");
+                                }
+                            case (6):
+                                {
+                                    return ("/Image/food/yablochko.png");
+                                }
+                            case (7):
+                                {
+                                    return ("/Image/food/жук.png");
+                                }
+                            case (8):
+                                {
+                                    return ("/Image/food/улитка.png");
+                                }
+                            case (9):
+                                {
+                                    return ("/Image/food/черви.png");
+                                }
+                        }
+                        break;
+                    }
+                default:
+                    {
+                        return ("/Image/food/food_test.png");
+                    }
+            }
+            return ("/Image/food/food_test.png");
+        }
+
+        private void next_button_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Resume();
+            m_gmCtl.NextGame();
         }
     }
 }

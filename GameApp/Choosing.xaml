@@ -254,37 +254,37 @@
                         <BitmapImage UriSource="Image/gait/lynx/1.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.114">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.143">
                     <DiscreteObjectKeyFrame.Value>
                         <BitmapImage UriSource="Image/gait/lynx/2.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.229">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.286">
                     <DiscreteObjectKeyFrame.Value>
                         <BitmapImage UriSource="Image/gait/lynx/3.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.343">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.429">
                     <DiscreteObjectKeyFrame.Value>
                         <BitmapImage UriSource="Image/gait/lynx/4.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.457">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.571">
                     <DiscreteObjectKeyFrame.Value>
                         <BitmapImage UriSource="Image/gait/lynx/5.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.571">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.714">
                     <DiscreteObjectKeyFrame.Value>
                         <BitmapImage UriSource="Image/gait/lynx/6.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.686">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.857">
                     <DiscreteObjectKeyFrame.Value>
                         <BitmapImage UriSource="Image/gait/lynx/7.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.8">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1">
                     <DiscreteObjectKeyFrame.Value>
                         <BitmapImage UriSource="Image/gait/lynx/8.png" />
                     </DiscreteObjectKeyFrame.Value>
@@ -350,27 +350,27 @@
                                Storyboard.TargetProperty="(Image.Source)" RepeatBehavior="Forever">
                 <DiscreteObjectKeyFrame KeyTime="0">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/hedgehog/1.png" />
+                        <BitmapImage UriSource="Image/gait/hedgehog/11.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.087">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/hedgehog/2.png" />
+                        <BitmapImage UriSource="Image/gait/hedgehog/10.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.174">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/hedgehog/3.png" />
+                        <BitmapImage UriSource="Image/gait/hedgehog/9.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.261">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/hedgehog/4.png" />
+                        <BitmapImage UriSource="Image/gait/hedgehog/8.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.348">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/hedgehog/5.png" />
+                        <BitmapImage UriSource="Image/gait/hedgehog/7.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.435">
@@ -380,27 +380,27 @@
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.522">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/hedgehog/7.png" />
+                        <BitmapImage UriSource="Image/gait/hedgehog/5.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.609">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/hedgehog/8.png" />
+                        <BitmapImage UriSource="Image/gait/hedgehog/4.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.696">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/hedgehog/9.png" />
+                        <BitmapImage UriSource="Image/gait/hedgehog/3.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.783">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/hedgehog/10.png" />
+                        <BitmapImage UriSource="Image/gait/hedgehog/2.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.87">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="Image/gait/hedgehog/11.png" />
+                        <BitmapImage UriSource="Image/gait/hedgehog/1.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
@@ -457,37 +457,37 @@
                         <BitmapImage UriSource="Image/gait/elk/1.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.143">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.172">
                     <DiscreteObjectKeyFrame.Value>
                         <BitmapImage UriSource="Image/gait/elk/2.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.286">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.343">
                     <DiscreteObjectKeyFrame.Value>
                         <BitmapImage UriSource="Image/gait/elk/3.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.429">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.515">
                     <DiscreteObjectKeyFrame.Value>
                         <BitmapImage UriSource="Image/gait/elk/4.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.571">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.685">
                     <DiscreteObjectKeyFrame.Value>
                         <BitmapImage UriSource="Image/gait/elk/5.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.714">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.857">
                     <DiscreteObjectKeyFrame.Value>
                         <BitmapImage UriSource="Image/gait/elk/6.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.857">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.028">
                     <DiscreteObjectKeyFrame.Value>
                         <BitmapImage UriSource="Image/gait/elk/7.png" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.2">
                     <DiscreteObjectKeyFrame.Value>
                         <BitmapImage UriSource="Image/gait/elk/8.png" />
                     </DiscreteObjectKeyFrame.Value>

@@ -582,5 +582,11 @@
   <ItemGroup>
     <Resource Include="Image\test\_2\superfluous.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\food\food_test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Image\face\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
