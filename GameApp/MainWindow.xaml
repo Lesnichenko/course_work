@@ -296,7 +296,7 @@
                                 Grid.Column="1">
                                 <Button.Template>
                                     <ControlTemplate>
-                                        <Image Source="/Image/Menu/back.png"/>
+                                        <Image Source="/Image/home.png"/>
                                     </ControlTemplate>
                                 </Button.Template>
                             </Button>

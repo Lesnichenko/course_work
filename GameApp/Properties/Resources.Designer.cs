@@ -713,6 +713,16 @@ namespace GameApp.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap home {
+            get {
+                object obj = ResourceManager.GetObject("home", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap learn_eating {
             get {
                 object obj = ResourceManager.GetObject("learn_eating", resourceCulture);
@@ -826,6 +836,16 @@ namespace GameApp.Properties {
         internal static System.Drawing.Bitmap rastenia {
             get {
                 object obj = ResourceManager.GetObject("rastenia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap restart {
+            get {
+                object obj = ResourceManager.GetObject("restart", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

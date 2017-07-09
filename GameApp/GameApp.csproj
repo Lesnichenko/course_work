@@ -589,5 +589,11 @@
   <ItemGroup>
     <Folder Include="Image\face\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\restart.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

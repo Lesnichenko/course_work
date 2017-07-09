@@ -189,7 +189,7 @@
             <Grid Grid.Row="0" Grid.ColumnSpan="5" Grid.Column="0" Style="{StaticResource gridStyle}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="6*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Image Name="titleImage"   
@@ -349,20 +349,28 @@
                 </Button.Template>
             </Button>
 
-            <Button Grid.Row="3"
+            <Grid Grid.Row="3"
                     Grid.Column="2" 
-                    Grid.ColumnSpan="1"
+                    Grid.ColumnSpan="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                
+                <Button Grid.Row="1"
                     Style="{StaticResource ButtonStyle}"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     Click="RestartButtonClick"
                     Name="restartButton">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Image Source="/Image/Menu/back.png" Stretch="Uniform"/>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="/Image/restart.png" Stretch="Uniform"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
 
             <Button Grid.Row="3"
                     Grid.Column="0" 

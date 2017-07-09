@@ -160,10 +160,11 @@ namespace GameApp
             {
                 m_Rect.StrokeThickness = System.Math.Min(ActualWidth, ActualHeight) * 0.05;
 
-                if (m_bSelected)
-                    m_Rect.Stroke = new SolidColorBrush(Color.FromRgb(200, 200, 0));
-                else
-                    m_Rect.Stroke = new SolidColorBrush(Color.FromRgb(/*87, 135, 70*/ 128, 0, 0));
+                //if (m_bSelected)
+                //    m_Rect.Stroke = new SolidColorBrush(Color.FromRgb(200, 200, 0));
+                // else
+                //     m_Rect.Stroke = new SolidColorBrush(Color.FromRgb(/*87, 135, 70*/ 128, 0, 0));
+                m_Rect.Stroke = new SolidColorBrush(Color.FromRgb(125, 91, 23));
             }
             else
                 m_Rect.StrokeThickness = 0.0;
