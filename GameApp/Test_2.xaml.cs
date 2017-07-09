@@ -47,6 +47,7 @@ namespace GameApp
             excess_1 = false;
             excess_2 = false;
             excess_3 = false;
+            Rest.Visibility = Visibility.Collapsed;
             Number_Animal_Test = Choosing.Num_Animal;
             Creating_test(Number_Animal_Test);
             Resume();
@@ -62,7 +63,11 @@ namespace GameApp
             }
             else
             {
-                if (excess_2 || excess_3) next_button.Opacity = 100;
+                if (excess_2 || excess_3)
+                {
+                    next_button.Opacity = 100;
+                    Rest.Visibility = Visibility.Visible;
+                }
                 else excess_1 = true;
                 Choise.UriSource = new Uri("/Image/test/правильный ответ.png", UriKind.Relative);
             }
@@ -82,7 +87,11 @@ namespace GameApp
             }
             else
             {
-                if (excess_1 || excess_3) next_button.Opacity = 100;
+                if (excess_1 || excess_3)
+                {
+                    next_button.Opacity = 100;
+                    Rest.Visibility = Visibility.Visible;
+                }
                 else excess_2 = true;
                 Choise.UriSource = new Uri("/Image/test/правильный ответ.png", UriKind.Relative);
             }
@@ -102,7 +111,11 @@ namespace GameApp
             }
             else
             {
-                if (excess_1 || excess_2) next_button.Opacity = 100;
+                if (excess_1 || excess_2)
+                {
+                    next_button.Opacity = 100;
+                    Rest.Visibility = Visibility.Visible;
+                }
                 else excess_3 = true;
                 Choise.UriSource = new Uri("/Image/test/правильный ответ.png", UriKind.Relative);
             }
@@ -805,6 +818,11 @@ namespace GameApp
         {
             Resume();
             m_gmCtl.NextGame();
+        }
+
+        private void back_button_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            m_gmCtl.PrevGame();
         }
     }
 }

@@ -695,7 +695,7 @@
                 </Image>
             </Grid>
             <Image x:Name="Ellips_8" Height="224.965" Width="221.888" Source="Image/обводка.png" MouseDown="Ellips_8_MouseDown" HorizontalAlignment="Right" Margin="0,0,60.468,148" VerticalAlignment="Bottom" Opacity="0.0"/>
-            <Image x:Name="back_button" Height="89.071" Width="174" Source="Image/interface/назад.png" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom"/>
+            <Image x:Name="back_button" Height="89.071" Width="174" Source="Image/interface/назад.png" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" MouseDown="back_button_MouseDown"/>
 
         </Grid>
     </Viewbox>

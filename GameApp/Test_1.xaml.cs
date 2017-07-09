@@ -42,6 +42,7 @@ namespace GameApp
             {
                 Choosing.Num_Animal = rg.Next() % 8 + 1;
             }
+            Rest.Visibility = Visibility.Collapsed;
             Number_Animal_Test = Choosing.Num_Animal;
             Creating_test(Number_Animal_Test);
             Resume();
@@ -55,6 +56,7 @@ namespace GameApp
             {
                 next_button.Opacity = 100;
                 Choise.UriSource = new Uri("/Image/test/правильный ответ.png", UriKind.Relative);
+                Rest.Visibility = Visibility.Visible;
             }
             else Choise.UriSource = new Uri("/Image/test/неправильный ответ.png", UriKind.Relative);
             Choise.EndInit();
@@ -71,6 +73,7 @@ namespace GameApp
             {
                 next_button.Opacity = 100;
                 Choise.UriSource = new Uri("/Image/test/правильный ответ.png", UriKind.Relative);
+                Rest.Visibility = Visibility.Visible;
             }
             else Choise.UriSource = new Uri("/Image/test/неправильный ответ.png", UriKind.Relative);
             Choise.EndInit();
@@ -87,6 +90,7 @@ namespace GameApp
             {
                 next_button.Opacity = 100;
                 Choise.UriSource = new Uri("/Image/test/правильный ответ.png", UriKind.Relative);
+                Rest.Visibility = Visibility.Visible;
             }
             else Choise.UriSource = new Uri("/Image/test/неправильный ответ.png", UriKind.Relative);
             Choise.EndInit();
@@ -783,6 +787,11 @@ namespace GameApp
         {
             Resume();
             m_gmCtl.NextGame();
+        }
+
+        private void back_button_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            m_gmCtl.PrevGame();
         }
 
         private void Rest_Click(object sender, RoutedEventArgs e)

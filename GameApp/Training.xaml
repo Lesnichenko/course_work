@@ -578,7 +578,7 @@
                 <Image x:Name="W_2" Width="42" Source="Image/interface/зн белый.png"  Panel.ZIndex="2" Margin="47,0,48,0"/>
                 <Image x:Name="W_3" Width="42" Source="Image/interface/зн белый.png" Panel.ZIndex="2" HorizontalAlignment="Right" Margin="0,0,1,0"/>
             </Grid>
-            <Image x:Name="back_button" Height="89.071" Width="174" Source="Image/interface/назад.png" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom"/>
+            <Image x:Name="back_button" Height="89.071" Width="174" Source="Image/interface/назад.png" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" MouseDown="back_button_MouseDown"/>
             <Image x:Name="next_button" Height="89.071" Width="174" Source="Image/interface/вперёд.png" HorizontalAlignment="Right" Margin="0,0,10,11.5" VerticalAlignment="Bottom" MouseDown="next_button_MouseDown"/>
 
         </Grid>

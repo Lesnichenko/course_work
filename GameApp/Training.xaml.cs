@@ -310,7 +310,10 @@ namespace GameApp
             //NavigationService.Navigate(new Uri("/Test_1.xaml", UriKind.Relative));
             m_gmCtl.NextGame();
         }
+
+        private void back_button_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            m_gmCtl.PrevGame();
+        }
     }
-
-
 }
