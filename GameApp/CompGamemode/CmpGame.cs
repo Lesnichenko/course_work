@@ -77,6 +77,7 @@ namespace GameApp.CompGamemode
             m_nPairsLeft = 3;
 
             m_Parent.nextButton.Visibility = Visibility.Collapsed;
+            m_Parent.restartButton.Visibility = Visibility.Collapsed;
         }
 
         private int PushIntoSlots(CmpButton[] aControls, AnimalAge eAge, int nFillCount, ref Random randGenerator)
@@ -169,6 +170,7 @@ namespace GameApp.CompGamemode
                 m_eState = CmpGameState.CGS_COMPLETED;
 
                 m_Parent.nextButton.Visibility = Visibility.Visible;
+                m_Parent.restartButton.Visibility = Visibility.Visible;
                 //MessageBox.Show("Game completed.");
             }
             else

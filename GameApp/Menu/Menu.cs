@@ -83,11 +83,11 @@ namespace GameApp
                 MainWindow.last.m_gmCtl.StartGame();
                 HideMenu();
             }
-            else if (sender.Equals(MainWindow.last.menuBtnAbout))
+            /*else if (sender.Equals(MainWindow.last.menuBtnAbout))
             {
                 MainWindow.last.ShowAbout();
                 HideMenu();
-            }
+            }*/
         }
 
         public void OnSizeChanged(object sender, SizeChangedEventArgs args)

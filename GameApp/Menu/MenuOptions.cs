@@ -32,8 +32,8 @@ namespace GameApp
             grid.Width = dX;
             grid.Height = dH;
 
-            grid.ColumnDefinitions[0].Width = grid.ColumnDefinitions[2].Width = grid.ColumnDefinitions[4].Width = grid.ColumnDefinitions[6].Width = new GridLength(1.0, GridUnitType.Star);
-            grid.ColumnDefinitions[1].Width = grid.ColumnDefinitions[3].Width = grid.ColumnDefinitions[5].Width = new GridLength(dW);
+            grid.ColumnDefinitions[0].Width = grid.ColumnDefinitions[2].Width = grid.ColumnDefinitions[4].Width /*= grid.ColumnDefinitions[6].Width*/ = new GridLength(1.0, GridUnitType.Star);
+            grid.ColumnDefinitions[1].Width = grid.ColumnDefinitions[3].Width /*= grid.ColumnDefinitions[5].Width*/ = new GridLength(dW);
 
 
             Canvas.SetLeft(grid, 0.0);

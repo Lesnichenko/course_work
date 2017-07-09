@@ -276,8 +276,8 @@
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
+                                <!--<ColumnDefinition/>
+                                <ColumnDefinition/>-->
                                 <!--<ColumnDefinition Width="0.1*"/>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="{Binding ElementName=optionsPanelGrid, Path=ColumnDefinitions[0].Width}"/>
@@ -312,7 +312,7 @@
                                 </local:MenuSoundButton.Template>
                             </local:MenuSoundButton>
 
-                            <Button Grid.Column="5"
+                            <!--<Button Grid.Column="5"
                                         Cursor="Hand"
                                         Click="OnButtonClicked"
                                         Name="menuBtnAbout">
@@ -321,7 +321,7 @@
                                         <Image Source="/Image/Menu/btn_about.png"/>
                                     </ControlTemplate>
                                 </Button.Template>
-                            </Button>
+                            </Button>-->
                         </Grid>
 
                         <local:MenuExpandButton x:Name="expanderButton"                           
