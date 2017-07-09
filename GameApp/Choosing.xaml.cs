@@ -33,9 +33,11 @@ namespace GameApp
         // 2 - медведь // 6 - еж
         // 3 - волк    // 7 - белка
         // 4 - рысь    // 8 - лось
+        static public bool selected = false;
 
         private void Ellips_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            selected = true;
             Num_Animal = 1;
             //NavigationService.Navigate(new Uri("/Training.xaml", UriKind.Relative));
             m_gmCtl.NextGame();
@@ -43,6 +45,7 @@ namespace GameApp
 
         private void Ellips_2_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            selected = true;
             Num_Animal = 2;
             //NavigationService.Navigate(new Uri("/Training.xaml", UriKind.Relative));
             m_gmCtl.NextGame();
@@ -50,6 +53,7 @@ namespace GameApp
 
         private void Ellips_3_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            selected = true;
             Num_Animal = 3;
             // NavigationService.Navigate(new Uri("/Training.xaml", UriKind.Relative));
             m_gmCtl.NextGame();
@@ -57,6 +61,7 @@ namespace GameApp
 
         private void Ellips_4_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            selected = true;
             Num_Animal = 4;
             //NavigationService.Navigate(new Uri("/Training.xaml", UriKind.Relative));
 
@@ -65,6 +70,7 @@ namespace GameApp
 
         private void Ellips_5_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            selected = true;
             Num_Animal = 5;
             //NavigationService.Navigate(new Uri("/Training.xaml", UriKind.Relative));
 
@@ -73,6 +79,7 @@ namespace GameApp
 
         private void Ellips_6_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            selected = true;
             Num_Animal = 6;
             //NavigationService.Navigate(new Uri("/Training.xaml", UriKind.Relative));
 
@@ -81,6 +88,7 @@ namespace GameApp
 
         private void Ellips_7_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            selected = true;
             Num_Animal = 7;
             //NavigationService.Navigate(new Uri("/Training.xaml", UriKind.Relative));
             m_gmCtl.NextGame();
@@ -88,6 +96,7 @@ namespace GameApp
 
         private void Ellips_8_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            selected = true;
             Num_Animal = 8;
             //NavigationService.Navigate(new Uri("/Training.xaml", UriKind.Relative));
             m_gmCtl.NextGame();

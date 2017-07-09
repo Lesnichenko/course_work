@@ -40,7 +40,7 @@ namespace GameApp
         {
             Random rg = new Random();
 
-            if (!MainWindow.last.menuSelect.IsChecked())
+            if (!Choosing.selected)
             {
                 Choosing.Num_Animal = rg.Next() % 8 + 1;
             }

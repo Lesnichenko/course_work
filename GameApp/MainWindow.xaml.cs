@@ -12,6 +12,12 @@ namespace GameApp
 
     public partial class MainWindow : Window
     {
+        public interface ICanvasClickCallback
+        {
+            void OnClick();
+        };
+
+        private ICanvasClickCallback m_ClickCallback;
         public static MainWindow last;
         public GameModeController m_gmCtl;
 
@@ -75,6 +81,23 @@ namespace GameApp
             }
 
             menuCanvas.OnButtonClicked(sender);
+        }
+
+        public void ShowClickableCanvas(ICanvasClickCallback callback)
+        {
+            m_ClickCallback = callback;
+
+            clickableCanvas.Visibility = Visibility.Visible;
+        }
+
+        public void HideClickableCanvas()
+        {
+            clickableCanvas.Visibility = Visibility.Collapsed;
+        }
+
+        private void ClickableCanvasClick(object sender, RoutedEventArgs args)
+        {
+            m_ClickCallback.OnClick();
         }
 
         /*private void TestClick(object sender, RoutedEventArgs args)

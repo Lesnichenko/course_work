@@ -105,6 +105,7 @@ namespace GameApp
             }
             else */if (MainWindow.last.menuGrid != null)
                 UpdateMenu();
+            
         }
 
         /*public void Resize(double w, double h, double x, double y)

@@ -29,6 +29,7 @@ namespace GameApp
         {
             UnselectCurrent();
             m_eCurrentGame = MenuElement.MenuElementType.ME_NONE;
+            Choosing.selected = false;
             NextGame();
         }
 
@@ -57,6 +58,7 @@ namespace GameApp
                     MainWindow.last.menuGameExcluding.Unselect();
                     break;
                 case MenuElement.MenuElementType.ME_CAME_COMPARISON:
+                    m_cmpPage.CloseGame();
                     MainWindow.last.menuGameCmp.Unselect();
                     break;
             }
@@ -127,6 +129,73 @@ namespace GameApp
             }
 
             NextGame();
+        }
+
+        public void PrevGame()
+        {
+            UnselectCurrent();
+
+            m_eCurrentGame--;
+
+            if (m_eCurrentGame == MenuElement.MenuElementType.ME_NONE)
+            {
+                MainWindow.last.EYE.Navigate(m_MainMenu);
+                return;
+            }
+
+            switch (m_eCurrentGame)
+            {
+                case MenuElement.MenuElementType.ME_SELECT:
+                    if (MainWindow.last.menuSelect.IsChecked())
+                    {
+                        MainWindow.last.menuSelect.Select();
+                        MainWindow.last.EYE.Navigate(m_Choosing);
+                        return;
+                    }
+                    break;
+                case MenuElement.MenuElementType.ME_LEARN_EATING:
+                    if (MainWindow.last.menuLearnEating.IsChecked())
+                    {
+                        MainWindow.last.menuLearnEating.Select();
+                        MainWindow.last.EYE.Navigate(m_Training);
+                        m_Training.StartGame();
+                        return;
+                    }
+                    break;
+                case MenuElement.MenuElementType.ME_LEARN_TIMES:
+                    if (MainWindow.last.menuLearnTimes.IsChecked())
+                        MainWindow.last.menuLearnTimes.Select();
+                    break;
+                case MenuElement.MenuElementType.ME_GAME_EATING:
+                    if (MainWindow.last.menuGameEating.IsChecked())
+                    {
+                        MainWindow.last.menuGameEating.Select();
+                        MainWindow.last.EYE.Navigate(m_Test1);
+                        m_Test1.StartGame();
+                        return;
+                    }
+                    break;
+                case MenuElement.MenuElementType.ME_GAME_EXCLUDING:
+                    if (MainWindow.last.menuGameExcluding.IsChecked())
+                    {
+                        MainWindow.last.menuGameExcluding.Select();
+                        MainWindow.last.EYE.Navigate(m_Test2);
+                        m_Test2.StartGame();
+                        return;
+                    }
+                    break;
+                case MenuElement.MenuElementType.ME_CAME_COMPARISON:
+                    if (MainWindow.last.menuGameCmp.IsChecked())
+                    {
+                        MainWindow.last.menuGameCmp.Select();
+                        MainWindow.last.EYE.Navigate(m_cmpPage);
+                        m_cmpPage.StartGame();
+                        return;
+                    }
+                    break;
+            }
+
+            PrevGame();
         }
 
         public void BackToMenu()

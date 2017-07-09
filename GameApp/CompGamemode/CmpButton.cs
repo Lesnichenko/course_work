@@ -30,6 +30,8 @@ namespace GameApp.CompGamemode
         private Image m_CheckImg;
         private static ImageSource m_WrongImage = null;
         private static ImageSource m_RightImage = null;
+        private CmpPage            m_Parent;
+        private bool m_bIgnoreAnimEnd;
 
         public CmpButton()
         {
@@ -43,6 +45,11 @@ namespace GameApp.CompGamemode
 
             if (m_RightImage == null)
                 m_RightImage = ResourceController.GetResourceBitmap("/Image/CmpGM/cmp_right.png");
+        }
+
+        public void LinkParent(CmpPage page)
+        {
+            m_Parent = page;
         }
 
         protected override void OnClick()
@@ -81,16 +88,16 @@ namespace GameApp.CompGamemode
             if((m_nState & (int)CmpButtonState.CBS_SHOW_CHECK) != 0)
             {
                 ellipsePath.Stroke = new SolidColorBrush(Color.FromRgb(87, 135, 70));
-                ellipsePath.StrokeThickness = ellipsePath.ActualWidth * 0.05;
+                ellipsePath.StrokeThickness = m_Parent.ActualHeight * 0.0125;//ellipsePath.ActualWidth * 0.05;
                 m_CheckImg.Opacity = 0.75;
                 return;
             }
     
             ellipsePath.Stroke = new SolidColorBrush(Color.FromRgb(/*128, 0, 0*/ 125, 91, 23));
 
-            if ((m_nState & (int)CmpButtonState.CBS_CHECKED) != 0 || 
+            if ((m_nState & (int)CmpButtonState.CBS_CHECKED) != 0 ||
                 (m_nState & (int)CmpButtonState.CBS_HOVER) != 0)
-                ellipsePath.StrokeThickness = ellipsePath.ActualWidth * 0.025;
+                ellipsePath.StrokeThickness = m_Parent.ActualHeight * 0.0125;//ellipsePath.ActualWidth * 0.025;
             else
                 ellipsePath.StrokeThickness = 0.0;
 
@@ -143,6 +150,8 @@ namespace GameApp.CompGamemode
         {
             Image img = (Image)this.GetTemplateChild("ButtonAnimImage");
 
+            m_bIgnoreAnimEnd = true;
+
             m_Callback = callback;
 
             m_nState    = (int)CmpButtonState.CBS_DEFAULT;
@@ -159,7 +168,7 @@ namespace GameApp.CompGamemode
             Image                         img = (Image)this.GetTemplateChild("ButtonAnimImage");
             DoubleAnimationUsingKeyFrames anim = new DoubleAnimationUsingKeyFrames();
             DoubleKeyFrameCollection      kfCollection = new DoubleKeyFrameCollection();
-
+            
             img.Source  = m_RightImage;
             img.Opacity = 0.0;
 
@@ -179,11 +188,13 @@ namespace GameApp.CompGamemode
             anim.Completed += OnRightAnimationComplete;
 
             img.BeginAnimation(Image.OpacityProperty, anim);
+            m_bIgnoreAnimEnd = false;
         }
 
         private void OnRightAnimationComplete(object sender, EventArgs args)
         {
-            EnableState(CmpButtonState.CBS_SHOW_CHECK);
+            if(!m_bIgnoreAnimEnd)  
+                EnableState(CmpButtonState.CBS_SHOW_CHECK);
         }
 
         public void WrongAnimation()
@@ -201,7 +212,7 @@ namespace GameApp.CompGamemode
             img.Opacity = 0.0;
 
             double dCurTime = 0.0;
-            for (int i = 0; i < nTotalCount; i++, dCurTime += dFrameTime)
+            for (int i = 0; i < nTotalCount; i++)
             {
                 DoubleKeyFrame keyFrame = new DiscreteDoubleKeyFrame();
 
@@ -209,6 +220,8 @@ namespace GameApp.CompGamemode
                 keyFrame.Value   = (i % 2 == 0) ? 0.75 : 0;
 
                 kfCollection.Add(keyFrame);
+
+                dCurTime += (i == 0) ? 1.0 : dFrameTime;
             }
 
             anim.KeyFrames  = kfCollection;
@@ -216,11 +229,13 @@ namespace GameApp.CompGamemode
             anim.Completed += OnWrongAnimationComplete;
 
             img.BeginAnimation(Image.OpacityProperty, anim);
+            m_bIgnoreAnimEnd = false;
         }
 
         private void OnWrongAnimationComplete(object sender, EventArgs args)
         {
-            DisableState(CmpButtonState.CBS_DISABLED);
+            if(!m_bIgnoreAnimEnd)
+                DisableState(CmpButtonState.CBS_DISABLED);
         }
     }
 }

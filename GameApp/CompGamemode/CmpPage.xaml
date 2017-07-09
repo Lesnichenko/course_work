@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:cgm="clr-namespace:GameApp.CompGamemode"
       mc:Ignorable="d" 
+      Width="1152" Height="864"
       Title="CmpPage">
 
     <Page.Resources>
@@ -13,16 +14,35 @@
         </Style>
         
         <ControlTemplate x:Key="ButtonTemplate">
-            <Grid>
-                <Path Name="ButtonEllipse"  Stretch="Uniform" Fill="#FFFFFFFF">
+            <Grid Style="{StaticResource gridStyle}"
+                  Name="templateGrid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.06*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding ElementName=templateGrid, Path=ColumnDefinitions[0].Width}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.035*"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="{Binding ElementName=templateGrid, Path=RowDefinitions[0].Height}"/>
+                </Grid.RowDefinitions>
+                
+                <Path Name="ButtonEllipse"  
+                      Stretch="Uniform" 
+                      Fill="#FFFFFFFF"
+                      Grid.Column="1"
+                      Grid.Row="1">
                     <Path.Data>
                         <EllipseGeometry RadiusX="1" RadiusY="1"/>
                     </Path.Data>
                 </Path>
+                
                 <Grid Width="{Binding ElementName=ButtonEllipse, Path=ActualWidth}" 
                       Height="{Binding ElementName=ButtonEllipse, Path=ActualWidth}"
                       Style="{StaticResource gridStyle}"
-                      IsHitTestVisible="False">
+                      IsHitTestVisible="False"
+                      Grid.Column="1"
+                      Grid.Row="1">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="8*"/>
@@ -57,7 +77,83 @@
                 <Image IsHitTestVisible="False"
                        Name="ButtonAnimImage"
                        Width="{Binding ElementName=ButtonEllipse, Path=ActualWidth}" 
-                       Height="{Binding ElementName=ButtonEllipse, Path=ActualWidth}"/>
+                       Height="{Binding ElementName=ButtonEllipse, Path=ActualWidth}"
+                       Grid.Row="1"
+                       Grid.Column="1"/>
+
+                <!--="/Image/gait/bear/giphy_1.png"
+                       Width="{Binding ElementName=ButtonEllipse, Path=ActualWidth}"
+                       Height="{Binding ElementName=ButtonEllipse, Path=ActualHeight}"-->
+            </Grid>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="SmallButtonTemplate">
+            <Grid Style="{StaticResource gridStyle}"
+                  Name="templateSmallGrid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.06*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding ElementName=templateSmallGrid, Path=ColumnDefinitions[0].Width}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.3*"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="0.245*"/>
+                </Grid.RowDefinitions>
+
+                <Path Name="ButtonEllipse"  
+                      Stretch="Uniform" 
+                      Fill="#FFFFFFFF"
+                      Grid.Column="1"
+                      Grid.Row="1">
+                    <Path.Data>
+                        <EllipseGeometry RadiusX="1" RadiusY="1"/>
+                    </Path.Data>
+                </Path>
+
+                <Grid Width="{Binding ElementName=ButtonEllipse, Path=ActualWidth}" 
+                      Height="{Binding ElementName=ButtonEllipse, Path=ActualWidth}"
+                      Style="{StaticResource gridStyle}"
+                      IsHitTestVisible="False"
+                      Grid.Column="1"
+                      Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="8*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Row="1"
+                           Grid.Column="1"
+                           Name="ButtonImage"
+                           IsHitTestVisible="False"/>
+                    <Grid Style="{StaticResource gridStyle}"
+                          Grid.Column="1"
+                          Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="3*"/>
+                        </Grid.RowDefinitions>
+
+                        <Image Grid.Row="0" 
+                               HorizontalAlignment="Center" 
+                               VerticalAlignment="Center" 
+                               Stretch="Uniform"
+                               Name="ButtonCheckImage"
+                               Source="/Image/CmpGM/cmp_right.png"/>
+                    </Grid>
+                </Grid>
+                <Image IsHitTestVisible="False"
+                       Name="ButtonAnimImage"
+                       Width="{Binding ElementName=ButtonEllipse, Path=ActualWidth}" 
+                       Height="{Binding ElementName=ButtonEllipse, Path=ActualWidth}"
+                       Grid.Row="1"
+                       Grid.Column="1"/>
 
                 <!--="/Image/gait/bear/giphy_1.png"
                        Width="{Binding ElementName=ButtonEllipse, Path=ActualWidth}"
@@ -77,18 +173,20 @@
               Style="{StaticResource gridStyle}"
               Name="pageMainGrid">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2387*"/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition Width="{Binding ElementName=pageMainGrid, Path=ColumnDefinitions[0].Width}"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.546*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="0.25*"/>
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0" Grid.ColumnSpan="3" Grid.Column="0" Style="{StaticResource gridStyle}">
+            <Grid Grid.Row="0" Grid.ColumnSpan="5" Grid.Column="0" Style="{StaticResource gridStyle}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="4*"/>
@@ -110,8 +208,8 @@
                        FontWeight="Heavy"/>-->
             </Grid>
 
-            <Grid Grid.Row="1"
-                  Grid.Column="0"
+            <!--<Grid Grid.Row="1"
+                  Grid.Column="1"
                   Style="{StaticResource gridStyle}">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
@@ -122,17 +220,17 @@
                     <ColumnDefinition/>
                     <ColumnDefinition Width="8*"/>
                     <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
+                </Grid.ColumnDefinitions>-->
 
                 <cgm:CmpButton x:Name="cmpButton_0_0" 
                         Grid.Row="1" 
                         Grid.Column="1" 
                         Template="{StaticResource ButtonTemplate}" 
                         Style="{StaticResource ButtonStyle}"/>
-            </Grid>
+            <!--</Grid>-->
 
-            <Grid Grid.Row="1"
-                  Grid.Column="1"
+            <!--<Grid Grid.Row="1"
+                  Grid.Column="2"
                   Style="{StaticResource gridStyle}">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
@@ -143,17 +241,17 @@
                     <ColumnDefinition/>
                     <ColumnDefinition Width="8*"/>
                     <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
+                </Grid.ColumnDefinitions>-->
 
                 <cgm:CmpButton x:Name="cmpButton_0_1" 
                         Grid.Row="1" 
-                        Grid.Column="1" 
+                        Grid.Column="2" 
                         Template="{StaticResource ButtonTemplate}"
                         Style="{StaticResource ButtonStyle}"/>
-            </Grid>
+            <!--</Grid>-->
 
-            <Grid Grid.Row="1"
-                  Grid.Column="2"
+            <!--<Grid Grid.Row="1"
+                  Grid.Column="3"
                   Style="{StaticResource gridStyle}">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
@@ -164,37 +262,16 @@
                     <ColumnDefinition/>
                     <ColumnDefinition Width="8*"/>
                     <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
+                </Grid.ColumnDefinitions>-->
 
                 <cgm:CmpButton x:Name="cmpButton_0_2" 
                         Grid.Row="1" 
-                        Grid.Column="1" 
+                        Grid.Column="3" 
                         Template="{StaticResource ButtonTemplate}"
                         Style="{StaticResource ButtonStyle}"/>
-            </Grid>
+            <!--</Grid>-->
 
-            <Grid Grid.Row="2"
-                  Grid.Column="0"
-                  Style="{StaticResource gridStyle}">
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition Height="2*"/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-
-                <cgm:CmpButton x:Name="cmpButton_1_0" 
-                        Grid.Row="1" 
-                        Grid.Column="1" 
-                        Template="{StaticResource ButtonTemplate}" 
-                        Style="{StaticResource ButtonStyle}"/>
-            </Grid>
-
-            <Grid Grid.Row="2"
+            <!--<Grid Grid.Row="2"
                   Grid.Column="1"
                   Style="{StaticResource gridStyle}">
                 <Grid.RowDefinitions>
@@ -206,16 +283,16 @@
                     <ColumnDefinition/>
                     <ColumnDefinition Width="2*"/>
                     <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
+                </Grid.ColumnDefinitions>-->
 
-                <cgm:CmpButton x:Name="cmpButton_1_1" 
-                        Grid.Row="1" 
+                <cgm:CmpButton x:Name="cmpButton_1_0" 
+                        Grid.Row="2" 
                         Grid.Column="1" 
-                        Template="{StaticResource ButtonTemplate}"
+                        Template="{StaticResource SmallButtonTemplate}" 
                         Style="{StaticResource ButtonStyle}"/>
-            </Grid>
+            <!--</Grid>-->
 
-            <Grid Grid.Row="2"
+            <!--<Grid Grid.Row="2"
                   Grid.Column="2"
                   Style="{StaticResource gridStyle}">
                 <Grid.RowDefinitions>
@@ -227,17 +304,39 @@
                     <ColumnDefinition/>
                     <ColumnDefinition Width="2*"/>
                     <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
+                </Grid.ColumnDefinitions>-->
+
+                <cgm:CmpButton x:Name="cmpButton_1_1" 
+                        Grid.Row="2" 
+                        Grid.Column="2" 
+                        Template="{StaticResource SmallButtonTemplate}"
+                        Style="{StaticResource ButtonStyle}"/>
+            <!--</Grid>-->
+
+            <!--<Grid Grid.Row="2"
+                  Grid.Column="3"
+                  Style="{StaticResource gridStyle}">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>-->
 
                 <cgm:CmpButton x:Name="cmpButton_1_2" 
-                        Grid.Row="1" 
-                        Grid.Column="1" 
-                        Template="{StaticResource ButtonTemplate}"
+                        Grid.Row="2" 
+                        Grid.Column="3" 
+                        Template="{StaticResource SmallButtonTemplate}"
                         Style="{StaticResource ButtonStyle}"/>
-            </Grid>
+            <!--</Grid>-->
             
             <Button Grid.Row="3"
-                    Grid.Column="2" 
+                    Grid.Column="3" 
+                    Grid.ColumnSpan="2"
                     Style="{StaticResource ButtonStyle}"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center"
@@ -251,12 +350,28 @@
             </Button>
 
             <Button Grid.Row="3"
-                    Grid.Column="0" 
+                    Grid.Column="2" 
+                    Grid.ColumnSpan="1"
                     Style="{StaticResource ButtonStyle}"
-                    HorizontalAlignment="Left"
+                    HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     Click="RestartButtonClick"
                     Name="restartButton">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source="/Image/Menu/back.png" Stretch="Uniform"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Grid.Row="3"
+                    Grid.Column="0" 
+                    Grid.ColumnSpan="2"
+                    Style="{StaticResource ButtonStyle}"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Click="PrevButtonClick"
+                    Name="prevButton">
                 <Button.Template>
                     <ControlTemplate>
                         <Image Source="/Image/Menu/back.png" Stretch="Uniform"/>
@@ -275,12 +390,12 @@
                   Height="{Binding ElementName=messageCanvas, Path=ActualHeight}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="4*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="4*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 

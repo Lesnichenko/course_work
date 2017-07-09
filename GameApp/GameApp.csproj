@@ -69,6 +69,7 @@
     <None Include="Menu\MenuButton.cs" />
     <Compile Include="Menu\MenuElement.cs" />
     <Compile Include="Menu\MenuExpandButton.cs" />
+    <Compile Include="Menu\MenuOptions.cs" />
     <Compile Include="Menu\MenuSoundButton.cs" />
     <Compile Include="Screensaver.xaml.cs">
       <DependentUpon>Screensaver.xaml</DependentUpon>

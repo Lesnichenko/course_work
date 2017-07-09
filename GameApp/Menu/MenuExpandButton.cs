@@ -33,5 +33,10 @@ namespace GameApp
             m_Img.RenderTransform = trans;
             m_dAngle = dRot;
         }
+
+        public double GetWidth(double dHeight)
+        {
+            return m_Img.Source.Width / m_Img.Source.Height * dHeight;
+        }
     }
 }
