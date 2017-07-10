@@ -49,6 +49,7 @@ namespace GameApp
         }
 
         private Storyboard Animation_Animal;
+        private ImageSource src, last;
 
         public void StartGame()
         {
@@ -60,6 +61,8 @@ namespace GameApp
             }
 
             Navigation();
+
+            B_1_MouseDown(null, null);
         }
 
         private void Navigation()
@@ -96,6 +99,8 @@ namespace GameApp
                         food_img_3.UriSource = new Uri("/Image/food/ягоды.png", UriKind.Relative);
                         food_img_3.EndInit();
                         Animation_Animal = (Storyboard)FindResource("fox");
+
+                        src = ResourceController.GetResourceBitmap("/Image/CmpGM/AnimalChildren/fox.png");
                         break;
                     }
                 case (2):
@@ -107,7 +112,7 @@ namespace GameApp
                         page_2.UriSource = new Uri("/Image/training/2/bear.png", UriKind.Relative);
                         page_2.EndInit();
                         page_3.BeginInit();
-                        page_3.UriSource = new Uri("/Image/training/3/bear.png", UriKind.Relative);
+                        page_3.UriSource = new Uri("/Image/training/3/fox.png", UriKind.Relative);
                         page_3.EndInit();
                         food_img_1.BeginInit();
                         food_img_1.UriSource = new Uri("/Image/food/ягоды.png", UriKind.Relative);
@@ -119,6 +124,8 @@ namespace GameApp
                         food_img_3.UriSource = new Uri("/Image/food/ryba.png", UriKind.Relative);
                         food_img_3.EndInit();
                         Animation_Animal = (Storyboard)FindResource("bear");
+
+                        src = ResourceController.GetResourceBitmap("/Image/CmpGM/AnimalChildren/bear.png");
                         break;
                     }
                 case (3):
@@ -130,7 +137,7 @@ namespace GameApp
                         page_2.UriSource = new Uri("/Image/training/2/wolf.png", UriKind.Relative);
                         page_2.EndInit();
                         page_3.BeginInit();
-                        page_3.UriSource = new Uri("/Image/training/3/wolf.png", UriKind.Relative);
+                        page_3.UriSource = new Uri("/Image/training/3/fox.png", UriKind.Relative);
                         page_3.EndInit();
                         food_img_1.BeginInit();
                         food_img_1.UriSource = new Uri("/Image/food/жук.png", UriKind.Relative);
@@ -142,6 +149,8 @@ namespace GameApp
                         food_img_3.UriSource = new Uri("/Image/food/ягоды.png", UriKind.Relative);
                         food_img_3.EndInit();
                         Animation_Animal = (Storyboard)FindResource("wolf");
+
+                        src = ResourceController.GetResourceBitmap("/Image/CmpGM/AnimalChildren/wolf.png");
                         break;
                     }
                 case (4):
@@ -153,7 +162,7 @@ namespace GameApp
                         page_2.UriSource = new Uri("/Image/training/2/lynx.png", UriKind.Relative);
                         page_2.EndInit();
                         page_3.BeginInit();
-                        page_3.UriSource = new Uri("/Image/training/3/lynx.png", UriKind.Relative);
+                        page_3.UriSource = new Uri("/Image/training/3/fox.png", UriKind.Relative);
                         page_3.EndInit();
                         food_img_1.BeginInit();
                         food_img_1.UriSource = new Uri("/Image/food/жук.png", UriKind.Relative);
@@ -165,6 +174,8 @@ namespace GameApp
                         food_img_3.UriSource = new Uri("/Image/food/ягоды.png", UriKind.Relative);
                         food_img_3.EndInit();
                         Animation_Animal = (Storyboard)FindResource("lynx");
+
+                        src = ResourceController.GetResourceBitmap("/Image/CmpGM/AnimalChildren/lynx.png");
                         break;
                     }
                 case (5):
@@ -176,7 +187,7 @@ namespace GameApp
                         page_2.UriSource = new Uri("/Image/training/2/hare.png", UriKind.Relative);
                         page_2.EndInit();
                         page_3.BeginInit();
-                        page_3.UriSource = new Uri("/Image/training/3/hare.png", UriKind.Relative);
+                        page_3.UriSource = new Uri("/Image/training/3/fox.png", UriKind.Relative);
                         page_3.EndInit();
                         food_img_1.BeginInit();
                         food_img_1.UriSource = new Uri("/Image/food/morkov.png", UriKind.Relative);
@@ -188,6 +199,8 @@ namespace GameApp
                         food_img_3.UriSource = new Uri("/Image/food/rastenia.png", UriKind.Relative);
                         food_img_3.EndInit();
                         Animation_Animal = (Storyboard)FindResource("hare");
+
+                        src = ResourceController.GetResourceBitmap("/Image/CmpGM/AnimalChildren/hare.png");
                         break;
                     }
                 case (6):
@@ -199,7 +212,7 @@ namespace GameApp
                         page_2.UriSource = new Uri("/Image/training/2/hedgehog.png", UriKind.Relative);
                         page_2.EndInit();
                         page_3.BeginInit();
-                        page_3.UriSource = new Uri("/Image/training/3/hedgehog.png", UriKind.Relative);
+                        page_3.UriSource = new Uri("/Image/training/3/fox.png", UriKind.Relative);
                         page_3.EndInit();
                         food_img_1.BeginInit();
                         food_img_1.UriSource = new Uri("/Image/food/жук.png", UriKind.Relative);
@@ -211,6 +224,8 @@ namespace GameApp
                         food_img_3.UriSource = new Uri("/Image/food/черви.png", UriKind.Relative);
                         food_img_3.EndInit();
                         Animation_Animal = (Storyboard)FindResource("hedgehog");
+
+                        src = ResourceController.GetResourceBitmap("/Image/CmpGM/AnimalChildren/hedgehog.png");
                         break;
                     }
                 case (7):
@@ -222,7 +237,7 @@ namespace GameApp
                         page_2.UriSource = new Uri("/Image/training/2/squirrel.png", UriKind.Relative);
                         page_2.EndInit();
                         page_3.BeginInit();
-                        page_3.UriSource = new Uri("/Image/training/3/squirrel.png", UriKind.Relative);
+                        page_3.UriSource = new Uri("/Image/training/3/fox.png", UriKind.Relative);
                         page_3.EndInit();
                         food_img_1.BeginInit();
                         food_img_1.UriSource = new Uri("/Image/food/жук.png", UriKind.Relative);
@@ -234,6 +249,8 @@ namespace GameApp
                         food_img_3.UriSource = new Uri("/Image/food/ягоды.png", UriKind.Relative);
                         food_img_3.EndInit();
                         Animation_Animal = (Storyboard)FindResource("squirrel");
+
+                        src = ResourceController.GetResourceBitmap("/Image/CmpGM/AnimalChildren/squirrel.png");
                         break;
                     }
                 case (8):
@@ -245,7 +262,7 @@ namespace GameApp
                         page_2.UriSource = new Uri("/Image/training/2/elk.png", UriKind.Relative);
                         page_2.EndInit();
                         page_3.BeginInit();
-                        page_3.UriSource = new Uri("/Image/training/3/elk.png", UriKind.Relative);
+                        page_3.UriSource = new Uri("/Image/training/3/fox.png", UriKind.Relative);
                         page_3.EndInit();
                         food_img_1.BeginInit();
                         food_img_1.UriSource = new Uri("/Image/food/жук.png", UriKind.Relative);
@@ -257,9 +274,12 @@ namespace GameApp
                         food_img_3.UriSource = new Uri("/Image/food/ягоды.png", UriKind.Relative);
                         food_img_3.EndInit();
                         Animation_Animal = (Storyboard)FindResource("elk");
+
+                        src = ResourceController.GetResourceBitmap("/Image/CmpGM/AnimalChildren/elk.png");
                         break;
                     }
             }
+            last = food_img_2;
             img_1.Source = page_1;
             img_2.Source = page_2;
             img_3.Source = page_3;
@@ -287,9 +307,18 @@ namespace GameApp
             B_2.Opacity = 0;
             B_3.Opacity = 100;
             training_1.Opacity = 0;
-            canvas.Opacity = 0;
+            //canvas.Opacity = 0;
             training_2.Opacity = 100;
             training_3.Opacity = 0;
+
+            img_2.Opacity = 100.0;
+
+            food_1.Opacity = 100;
+            food_3.Opacity = 100;
+            food_2.Source = last;
+            Ellips_1.Visibility = Ellips_3.Visibility = Visibility.Visible;
+            /*Ellips_1.Opacity = 100;
+            Ellips_3.Opacity = 100;*/
             Animation_Animal.Stop(this);
         }
 
@@ -299,9 +328,17 @@ namespace GameApp
             B_2.Opacity = 100;
             B_3.Opacity = 0;
             training_1.Opacity = 0;
-            canvas.Opacity = 0;
-            training_2.Opacity = 0;
+            //canvas.Opacity = 0;
+            training_2.Opacity = 100;
+            img_2.Opacity = 0.0;
             training_3.Opacity = 100;
+
+            food_1.Opacity = 0;
+            food_3.Opacity = 0;
+            food_2.Source = src;
+            Ellips_1.Visibility = Ellips_3.Visibility = Visibility.Collapsed;
+            /*Ellips_1.Opacity = 0;
+            Ellips_3.Opacity = 0;*/
             Animation_Animal.Stop(this);
         }
 
