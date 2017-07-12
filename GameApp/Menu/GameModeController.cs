@@ -1,5 +1,6 @@
 ﻿
 using GameApp.CompGamemode;
+using GameApp.SelectionGamemode;
 
 namespace GameApp
 {
@@ -8,7 +9,7 @@ namespace GameApp
         private MainMenu m_MainMenu;
         private CmpPage m_cmpPage;
         private Choosing m_Choosing;
-        private Test_1 m_Test1;
+        private SelPage m_SelPage;
         private Training m_Training;
         private Test_2 m_Test2;
         private MenuElement.MenuElementType m_eCurrentGame;
@@ -18,7 +19,7 @@ namespace GameApp
             m_MainMenu = new MainMenu(this);
             m_cmpPage = new CmpPage(this);
             m_Choosing = new Choosing(this);
-            m_Test1 = new Test_1(this);
+            m_SelPage = new SelPage(this);
             m_Training = new Training(this);
             m_Test2 = new Test_2(this);
 
@@ -103,8 +104,8 @@ namespace GameApp
                     if (MainWindow.last.menuGameEating.IsChecked())
                     {
                         MainWindow.last.menuGameEating.Select();
-                        MainWindow.last.EYE.Navigate(m_Test1);
-                        m_Test1.StartGame();
+                        MainWindow.last.EYE.Navigate(m_SelPage);
+                        m_SelPage.StartGame();
                         return;
                     }
                     break;
@@ -170,8 +171,8 @@ namespace GameApp
                     if (MainWindow.last.menuGameEating.IsChecked())
                     {
                         MainWindow.last.menuGameEating.Select();
-                        MainWindow.last.EYE.Navigate(m_Test1);
-                        m_Test1.StartGame();
+                        MainWindow.last.EYE.Navigate(m_SelPage);
+                        m_SelPage.StartGame();
                         return;
                     }
                     break;

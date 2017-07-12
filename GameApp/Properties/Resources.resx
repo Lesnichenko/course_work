@@ -454,4 +454,31 @@
   <data name="restart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\restart.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bear8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\SelGM\bear.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="elk6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\SelGM\elk.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fox8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\SelGM\fox.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hare8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\SelGM\hare.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hedgehog8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\SelGM\hedgehog.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lynx6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\SelGM\lynx.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="squirrel6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\SelGM\squirrel.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="success" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\SelGM\success.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wolf6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\SelGM\wolf.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

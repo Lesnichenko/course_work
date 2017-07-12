@@ -74,7 +74,11 @@
     <Compile Include="Screensaver.xaml.cs">
       <DependentUpon>Screensaver.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Test_1.xaml.cs" />
+    <Compile Include="SelGamemode\FoodBase.cs" />
+    <Compile Include="SelGamemode\SelButton.cs" />
+    <Compile Include="SelGamemode\SelGame.cs" />
+    <Compile Include="SelGamemode\SelPage.cs" />
+    <None Include="Test_1.xaml.cs" />
     <Compile Include="Test_2.xaml.cs" />
     <Compile Include="Training.xaml.cs" />
     <Page Include="Choosing.xaml">
@@ -105,10 +109,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Test_1.xaml">
+    <Page Include="SelGamemode\SelPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <None Include="Test_1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
+    </None>
     <Page Include="Test_2.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -594,6 +602,33 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\restart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\SelGM\bear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\SelGM\elk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\SelGM\fox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\SelGM\hare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\SelGM\hedgehog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\SelGM\lynx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\SelGM\squirrel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\SelGM\wolf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\SelGM\success.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

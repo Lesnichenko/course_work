@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
+using GameApp.FoodBase;
 
 namespace GameApp.Animals
 {
@@ -32,9 +31,15 @@ namespace GameApp.Animals
         protected AnimalAge  m_eAge;
         protected string[]   m_asImages;
         protected string     m_sCmpSuccessImage;
+        protected FoodType[] m_aeFood;
+        protected string     m_sLabelImage;
+
         public    AnimalType GetAnimalType()          { return m_eType; }
         public    AnimalAge  GetAnimalAge()           { return m_eAge; }
         public    string     GetImagePath()           { return m_asImages[(int)m_eAge]; }
         public    string     GetCompareSuccessImage() { return m_sCmpSuccessImage; }
+        public    int        GetFoodCount()           { return m_aeFood.Length; }
+        public    FoodType   GetFoodType(int nId)     { return m_aeFood[nId]; }
+        public    string     GetLabelImage()          { return m_sLabelImage; }
     };
 }
